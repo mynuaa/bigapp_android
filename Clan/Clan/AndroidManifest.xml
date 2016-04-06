@@ -16,7 +16,7 @@
         android:smallScreens="true" />
 
     <application
-        android:name=".app.ClanApplication"
+        android:name="com.youzu.clan.app.ClanApplication"
         android:allowBackup="true"
         android:hardwareAccelerated="false"
         android:icon="@drawable/ic_launcher"
@@ -37,7 +37,7 @@
         </activity>
 
         <activity
-            android:name=".main.qqstyle.QQStyleMainActivity"
+            android:name="com.youzu.clan.main.qqstyle.QQStyleMainActivity"
             android:hardwareAccelerated="true"
             android:icon="@drawable/ic_launcher"
             android:label="@string/forum_name"
@@ -45,7 +45,7 @@
             android:screenOrientation="portrait"
             android:theme="@style/NoActionBarTheme" />
         <activity
-            android:name=".main.sliding.SlidingStyleMainActivity"
+            android:name="com.youzu.clan.main.sliding.SlidingStyleMainActivity"
             android:hardwareAccelerated="true"
             android:icon="@drawable/ic_launcher"
             android:label="@string/forum_name"
@@ -53,7 +53,7 @@
             android:screenOrientation="portrait"
             android:theme="@style/ActionBarTheme" />
         <activity
-            android:name=".main.wechatstyle.WeChatStyleMainActivity"
+            android:name="com.youzu.clan.main.wechatstyle.WeChatStyleMainActivity"
             android:icon="@drawable/ic_launcher"
             android:label="@string/forum_name"
             android:launchMode="singleTask"
@@ -61,7 +61,7 @@
             android:theme="@style/NoActionBarThemeYellowTabPageIndicator" />
 
         <activity
-            android:name=".main.bottomtab.BottomTabMainActivity"
+            android:name="com.youzu.clan.main.bottomtab.BottomTabMainActivity"
             android:icon="@drawable/ic_launcher"
             android:label="@string/forum_name"
             android:launchMode="singleTask"
@@ -69,7 +69,7 @@
             android:theme="@style/ActionBarTheme" />
 
         <activity
-            android:name=".main.android.PureAndroidMainActivity"
+            android:name="com.youzu.clan.main.android.PureAndroidMainActivity"
             android:icon="@drawable/ic_launcher"
             android:label="@string/forum_name"
             android:launchMode="singleTask"
@@ -106,7 +106,7 @@
             android:screenOrientation="portrait"
             android:theme="@style/ActionBarTheme" />
         <activity
-            android:name=".login.CallBackWebActivity"
+            android:name="com.youzu.clan.login.CallBackWebActivity"
             android:hardwareAccelerated="true"
             android:label="@string/register"
             android:launchMode="singleTop"
@@ -119,13 +119,13 @@
             android:screenOrientation="portrait"
             android:theme="@style/ActionBarTheme" />
         <activity
-            android:name=".message.pm.MyPMActivityOld"
+            android:name="com.youzu.clan.message.pm.MyPMActivityOld"
             android:label="@string/my_pm"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"
             android:theme="@style/ActionBarTheme" />
         <activity
-            android:name=".message.pm.MyPMActivity"
+            android:name="com.youzu.clan.message.pm.MyPMActivity"
             android:label="@string/my_pm"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"
@@ -151,7 +151,7 @@
             android:screenOrientation="portrait"
             android:theme="@style/ActionBarTheme" />
         <activity
-            android:name=".thread.detail.ThreadDetailActivity"
+            android:name="com.youzu.clan.thread.detail.ThreadDetailActivity"
             android:hardwareAccelerated="true"
             android:label="@string/thread_detail"
             android:launchMode="standard"
@@ -164,13 +164,13 @@
             android:screenOrientation="portrait"
             android:theme="@style/ActionBarTheme" />
         <activity
-            android:name=".profile.thread.OwnerThreadActivity"
+            android:name="com.youzu.clan.profile.thread.OwnerThreadActivity"
             android:label="@string/my_thread"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"
             android:theme="@style/ActionBarTheme.Tab.Small" />
         <activity
-            android:name=".profile.thread.MyThreadActivity"
+            android:name="com.youzu.clan.profile.thread.MyThreadActivity"
             android:label="@string/my_thread"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"
@@ -182,12 +182,12 @@
         <!--android:screenOrientation="portrait"-->
         <!--android:theme="@style/ActionBarTheme.Tab.Small" />-->
         <activity
-            android:name=".profile.homepage.HomePageActivity"
+            android:name="com.youzu.clan.profile.homepage.HomePageActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"
             android:theme="@style/NoActionBarTheme" />
         <activity
-            android:name=".message.pm.ChatActivity"
+            android:name="com.youzu.clan.message.pm.ChatActivity"
             android:label="@string/thread_detail"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"
@@ -204,7 +204,7 @@
             android:screenOrientation="portrait"
             android:theme="@style/ActionBarTheme" />
         <activity
-            android:name=".thread.ThreadNewActivity"
+            android:name="com.youzu.clan.thread.ThreadNewActivity"
             android:label="@string/new_thread"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"
@@ -230,39 +230,39 @@
             android:screenOrientation="portrait"
             android:theme="@style/ActionBarTheme" />
         <activity
-            android:name=".common.images.PicSelectorActivity"
+            android:name="com.youzu.clan.common.images.PicSelectorActivity"
             android:label=""
             android:launchMode="singleTop"
             android:screenOrientation="portrait"
             android:theme="@style/ActionBarTheme" />
         <activity
-            android:name=".common.images.ImagesLookerActivity"
+            android:name="com.youzu.clan.common.images.ImagesLookerActivity"
             android:label=""
             android:launchMode="singleTop"
             android:screenOrientation="portrait"
             android:theme="@style/ActionBarTheme" />
         <activity
-            android:name=".app.WebActivity"
+            android:name="com.youzu.clan.app.WebActivity"
             android:hardwareAccelerated="true"
             android:label=""
             android:launchMode="singleTop"
             android:screenOrientation="portrait"
             android:theme="@style/ActionBarTheme" />
         <activity
-            android:name=".video.VideoPlayWebActivity"
+            android:name="com.youzu.clan.video.VideoPlayWebActivity"
             android:hardwareAccelerated="true"
             android:label=""
             android:launchMode="singleTop"
             android:screenOrientation="landscape"
             android:theme="@style/FullscreenTheme" />
         <activity
-            android:name=".setting.SettingsActivity"
+            android:name="com.youzu.clan.setting.SettingsActivity"
             android:label="@string/settings"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"
             android:theme="@style/ActionBarTheme" />
         <activity
-            android:name=".app.AboutActivity"
+            android:name="com.youzu.clan.app.AboutActivity"
             android:label="@string/about"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"
@@ -270,77 +270,77 @@
 
 
         <activity
-            android:name=".setting.supersetting.SuperSettingsActivity"
+            android:name="com.youzu.clan.setting.supersetting.SuperSettingsActivity"
             android:label="@string/super_settings"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"
             android:theme="@style/ActionBarTheme.Tab.Small" />
 
         <activity
-            android:name=".search.SearchActivity"
+            android:name="com.youzu.clan.search.SearchActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"
             android:theme="@style/ActionBarTheme"
             android:windowSoftInputMode="stateVisible|adjustResize" />
 
         <activity
-            android:name=".friends.FriendsActivity"
+            android:name="com.youzu.clan.friends.FriendsActivity"
             android:label="@string/my_friends_title"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"
             android:theme="@style/ActionBarTheme" />
         <activity
-            android:name=".friends.AddFriendsActivity"
+            android:name="com.youzu.clan.friends.AddFriendsActivity"
             android:label="@string/add_friends_title"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"
             android:theme="@style/ActionBarTheme" />
         <activity
-            android:name=".friends.SearchFriendsActivity"
+            android:name="com.youzu.clan.friends.SearchFriendsActivity"
             android:label="@string/search_friends"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"
             android:theme="@style/ActionBarTheme"
             android:windowSoftInputMode="stateVisible|adjustResize" />
         <activity
-            android:name=".friends.NewFriendsActivity"
+            android:name="com.youzu.clan.friends.NewFriendsActivity"
             android:label="@string/new_friends_title"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"
             android:theme="@style/ActionBarTheme" />
         <activity
-            android:name=".friends.ApplyFriendsActivity"
+            android:name="com.youzu.clan.friends.ApplyFriendsActivity"
             android:label="@string/apply_friends_title"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"
             android:theme="@style/ActionBarTheme" />
 
         <activity
-            android:name=".act.apply.ActApplyActivity"
+            android:name="com.youzu.clan.act.apply.ActApplyActivity"
             android:label="@string/apply_act_title"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"
             android:theme="@style/ActionBarTheme" />
 
         <activity
-            android:name=".act.publish.ActPublishActivity"
+            android:name="com.youzu.clan.act.publish.ActPublishActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"
             android:theme="@style/ActionBarTheme" />
         <activity
-            android:name=".act.publish.ActSelectTypeActivity"
+            android:name="com.youzu.clan.act.publish.ActSelectTypeActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"
             android:theme="@style/ActionBarTheme" />
         <activity
-            android:name=".act.manage.ActManageActivity"
+            android:name="com.youzu.clan.act.manage.ActManageActivity"
             android:hardwareAccelerated="true"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"
             android:theme="@style/ActionBarTheme" />
 
         <activity
-            android:name=".main.bottomtab.MenuJumpActivity"
+            android:name="com.youzu.clan.main.bottomtab.MenuJumpActivity"
             android:label="@string/default_value"
             android:launchMode="standard"
             android:screenOrientation="portrait"
@@ -379,7 +379,7 @@
             android:theme="@android:style/Theme.Translucent.NoTitleBar" />
 
         <activity
-            android:name=".wxapi.WXEntryActivity"
+            android:name="com.youzu.clan.wxapi.WXEntryActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:exported="true"
             android:screenOrientation="portrait"
@@ -448,7 +448,7 @@
         <activity android:name="cn.sharesdk.feedback.ContactActivity" />
         <!-- analysisSDK End -->
 
-        <service android:name=".app.service.ClanService" />
+        <service android:name="com.youzu.clan.app.service.ClanService" />
 
         <!-- Required SDK核心功能-->
         <activity

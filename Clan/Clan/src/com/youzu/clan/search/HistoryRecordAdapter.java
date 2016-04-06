@@ -1,7 +1,6 @@
 package com.youzu.clan.search;
 
 import java.util.ArrayList;
-import java.util.Set;
 
 import com.kit.utils.DensityUtils;
 import com.youzu.clan.R;

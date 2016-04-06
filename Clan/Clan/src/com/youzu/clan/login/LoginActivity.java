@@ -16,7 +16,6 @@ import android.widget.Toast;
 
 import com.kit.app.UIHandler;
 import com.kit.app.core.task.DoSomeThing;
-import com.kit.utils.AppUtils;
 import com.kit.utils.ZogUtils;
 import com.kit.widget.edittext.PasswordEditText;
 import com.kit.widget.edittext.WithDelEditText;

@@ -2,7 +2,6 @@ package com.youzu.clan.base.json;
 
 import com.youzu.android.framework.json.annotation.JSONField;
 import com.youzu.clan.base.json.act.ActPlayerVariables;
-import com.youzu.clan.base.json.forumnav.ForumnavVariables;
 
 public class ActPlayerJson extends BaseJson {
 

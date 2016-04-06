@@ -1,9 +1,5 @@
 package com.youzu.clan.base.json.act;
 
-import android.text.Spanned;
-
-import java.util.ArrayList;
-
 /**
  * Created by wjwu on 2015/11/26.
  */

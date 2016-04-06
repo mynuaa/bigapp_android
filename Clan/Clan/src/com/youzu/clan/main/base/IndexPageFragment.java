@@ -10,7 +10,6 @@ import android.widget.AdapterView;
 
 import com.gc.materialdesign.views.ButtonFloat;
 import com.kit.app.core.task.DoSomeThing;
-import com.kit.bottomtabui.MainActivity;
 import com.kit.pinnedsectionlistview.PinnedSectionListView;
 import com.kit.utils.ZogUtils;
 import com.kit.utils.intentutils.IntentUtils;

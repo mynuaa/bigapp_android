@@ -1,6 +1,5 @@
 package com.youzu.clan.base.json.act;
 
-import com.youzu.clan.base.json.forumnav.NavForum;
 import com.youzu.clan.base.json.model.PagedVariables;
 
 import java.util.ArrayList;

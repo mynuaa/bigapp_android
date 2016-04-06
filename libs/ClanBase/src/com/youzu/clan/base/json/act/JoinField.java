@@ -1,7 +1,6 @@
 package com.youzu.clan.base.json.act;
 
 import com.youzu.android.framework.json.annotation.JSONField;
-import com.youzu.clan.base.json.model.FileInfo;
 
 import java.io.Serializable;
 

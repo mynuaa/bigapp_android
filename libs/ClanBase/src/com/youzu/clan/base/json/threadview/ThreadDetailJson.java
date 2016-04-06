@@ -2,7 +2,6 @@ package com.youzu.clan.base.json.threadview;
 
 import com.youzu.android.framework.json.annotation.JSONField;
 import com.youzu.clan.base.json.BaseJson;
-import com.youzu.clan.base.json.threadview.ThreadDetailVariables;
 
 /**
  *

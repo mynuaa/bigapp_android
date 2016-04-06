@@ -7,7 +7,6 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.handmark.pulltorefresh.library.PullToRefreshBase;
-import com.kit.utils.ZogUtils;
 import com.youzu.clan.R;
 import com.youzu.clan.base.BaseFragment;
 import com.youzu.clan.base.widget.list.RefreshListView;

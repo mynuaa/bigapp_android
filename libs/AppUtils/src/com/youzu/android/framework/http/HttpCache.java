@@ -17,7 +17,6 @@ package com.youzu.android.framework.http;
 
 import android.text.TextUtils;
 
-import com.youzu.android.framework.HttpUtils;
 import com.youzu.android.framework.cache.LruMemoryCache;
 import com.youzu.android.framework.http.client.HttpRequest;
 

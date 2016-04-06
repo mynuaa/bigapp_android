@@ -10,7 +10,6 @@ import com.youzu.clan.app.constant.Key;
 import com.youzu.clan.base.util.AppSPUtils;
 import com.youzu.clan.base.util.ClanUtils;
 import com.youzu.clan.profile.homepage.HomePageActivity;
-import com.youzu.clan.thread.detail.ThreadDetailActivity;
 
 /**
  * Created by Zhao on 15/11/3.

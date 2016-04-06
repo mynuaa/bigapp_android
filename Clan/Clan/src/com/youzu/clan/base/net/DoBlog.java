@@ -1,17 +1,14 @@
 package com.youzu.clan.base.net;
 
 import android.content.Context;
-import android.os.Bundle;
 import android.os.Handler;
 import android.support.v4.app.FragmentActivity;
-import android.util.Log;
 
 import com.kit.utils.MessageUtils;
 import com.youzu.clan.base.callback.StringCallback;
 import com.youzu.clan.base.enums.MessageVal;
 import com.youzu.clan.base.json.BaseJson;
 import com.youzu.clan.base.json.act.ActPublishInfo;
-import com.youzu.clan.base.json.blog.ReqBlogListParam;
 import com.youzu.clan.base.util.ClanUtils;
 
 /**

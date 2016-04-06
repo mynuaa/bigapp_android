@@ -7,14 +7,9 @@ import android.widget.CheckBox;
 import android.widget.TextView;
 
 import com.youzu.clan.R;
-import com.youzu.clan.base.json.FavThreadJson;
-import com.youzu.clan.base.json.article.Article;
 import com.youzu.clan.base.json.article.ArticleFav;
 import com.youzu.clan.base.json.article.ArticleFavJson;
-import com.youzu.clan.base.json.article.ArticleJson;
-import com.youzu.clan.base.json.favthread.Thread;
 import com.youzu.clan.base.net.ClanHttpParams;
-import com.youzu.clan.base.util.DateUtils;
 import com.youzu.clan.base.util.StringUtils;
 import com.youzu.clan.base.widget.ViewHolder;
 import com.youzu.clan.base.widget.list.BaseRefreshAdapter;

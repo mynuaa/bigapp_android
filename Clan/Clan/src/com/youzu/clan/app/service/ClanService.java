@@ -9,7 +9,6 @@ import com.kit.utils.ZogUtils;
 import com.youzu.clan.app.constant.Key;
 import com.youzu.clan.base.common.Action;
 import com.youzu.clan.base.config.Url;
-import com.youzu.clan.base.json.BaseJson;
 import com.youzu.clan.base.json.FavForumJson;
 import com.youzu.clan.base.json.FavThreadJson;
 import com.youzu.clan.base.json.article.ArticleFav;

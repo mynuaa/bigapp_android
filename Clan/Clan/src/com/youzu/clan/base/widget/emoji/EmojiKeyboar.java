@@ -1,16 +1,11 @@
 package com.youzu.clan.base.widget.emoji;
 
 import android.content.Context;
-import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.widget.AdapterView;
-import android.widget.AdapterView.OnItemClickListener;
 import android.widget.LinearLayout;
-import android.widget.SimpleAdapter;
-import android.widget.TableLayout;
 
 import com.viewpagerindicator.CirclePageIndicator;
 import com.youzu.clan.R;

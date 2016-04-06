@@ -1,6 +1,5 @@
 package com.youzu.clan.threadandarticle;
 
-import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
@@ -31,12 +30,7 @@ import com.kit.utils.DensityUtils;
 import com.kit.utils.ListUtils;
 import com.kit.utils.ZogUtils;
 import com.youzu.android.framework.JsonUtils;
-import com.youzu.android.framework.http.HttpCache;
 import com.youzu.clan.R;
-import com.youzu.clan.base.callback.JSONCallback;
-import com.youzu.clan.base.common.Action;
-import com.youzu.clan.base.config.AppBaseConfig;
-import com.youzu.clan.base.config.Url;
 import com.youzu.clan.base.enums.IndexPagePicShow;
 import com.youzu.clan.base.json.ForumAdJson;
 import com.youzu.clan.base.json.ForumDisplayJson;
@@ -47,7 +41,6 @@ import com.youzu.clan.base.json.forumdisplay.Forum;
 import com.youzu.clan.base.json.forumdisplay.ForumDisplayVariables;
 import com.youzu.clan.base.json.forumdisplay.ThreadTypes;
 import com.youzu.clan.base.json.forumnav.NavForum;
-import com.youzu.clan.base.net.BaseHttp;
 import com.youzu.clan.base.net.ClanHttpParams;
 import com.youzu.clan.base.util.AppSPUtils;
 import com.youzu.clan.base.util.ClanUtils;

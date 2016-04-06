@@ -1,7 +1,6 @@
 package com.youzu.clan.base.json.blog;
 
 import java.io.Serializable;
-import java.util.ArrayList;
 
 /**
  * Created by wjwu on 2015/12/18.

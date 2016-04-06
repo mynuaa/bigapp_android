@@ -27,7 +27,6 @@ import com.youzu.clan.R;
 import com.youzu.clan.base.BaseActivity;
 import com.youzu.clan.base.util.AppSPUtils;
 import com.youzu.clan.base.util.AppUSPUtils;
-import com.youzu.clan.base.util.InitUtils;
 import com.youzu.clan.base.util.ShareUtils;
 import com.youzu.clan.base.util.StringUtils;
 import com.youzu.clan.base.util.ToastUtils;

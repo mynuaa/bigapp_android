@@ -1,7 +1,6 @@
 package com.youzu.clan.base.json.config.content;
 
 import com.youzu.clan.base.json.BaseResponse;
-import com.youzu.clan.base.json.config.content.ContentConfig;
 
 /**
  * Created by Zhao on 15/6/16.

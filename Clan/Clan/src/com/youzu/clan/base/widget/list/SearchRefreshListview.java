@@ -3,7 +3,6 @@ package com.youzu.clan.base.widget.list;
 import android.content.Context;
 import android.util.AttributeSet;
 
-import com.handmark.pulltorefresh.library.PullToRefreshBase;
 import com.youzu.clan.R;
 import com.youzu.clan.base.widget.EmptyView;
 

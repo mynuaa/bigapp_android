@@ -7,7 +7,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.youzu.clan.R;
-import com.youzu.clan.base.json.forumdisplay.*;
 import com.youzu.clan.base.json.search.SearchThread;
 import com.youzu.clan.base.json.search.SearchThreadJson;
 import com.youzu.clan.base.net.ClanHttpParams;

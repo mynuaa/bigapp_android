@@ -5,7 +5,6 @@ import android.util.Log;
 
 import com.kit.utils.StringUtils;
 import com.kit.utils.ZogUtils;
-import com.youzu.android.framework.JsonUtils;
 import com.youzu.clan.base.callback.HttpCallback;
 import com.youzu.clan.base.callback.ProfileCallback;
 import com.youzu.clan.base.config.Url;

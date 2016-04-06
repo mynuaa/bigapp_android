@@ -30,7 +30,6 @@ import com.youzu.clan.base.net.DoThread;
 import com.youzu.clan.base.util.ClanUtils;
 import com.youzu.clan.base.util.SmileyUtils;
 import com.youzu.clan.base.util.ToastUtils;
-import com.youzu.clan.setting.supersetting.user_sub.SuperSettingSubBottomTabFragment;
 import com.youzu.clan.thread.ThreadAddBaseFragment;
 import com.youzu.clan.threadandarticle.DoDetail;
 

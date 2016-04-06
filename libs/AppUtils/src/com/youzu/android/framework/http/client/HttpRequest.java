@@ -15,8 +15,6 @@
 
 package com.youzu.android.framework.http.client;
 
-import android.net.Uri;
-
 import com.youzu.android.framework.http.RequestParams;
 import com.youzu.android.framework.http.callback.RequestCallBackHandler;
 import com.youzu.android.framework.http.client.entity.UploadEntity;

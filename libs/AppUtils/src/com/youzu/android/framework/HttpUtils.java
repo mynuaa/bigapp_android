@@ -16,7 +16,6 @@
 package com.youzu.android.framework;
 
 import android.text.TextUtils;
-import android.util.Log;
 
 import com.youzu.android.framework.exception.HttpException;
 import com.youzu.android.framework.http.HttpCache;
