@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">纸飞机</string>
+    <string name="app_name">南航纸飞机</string>
 
     <string name="version_display">版本号：%1$s</string>
 
