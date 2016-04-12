@@ -1,7 +1,10 @@
 package com.youzu.clan.guide;
 
+import android.app.ActionBar;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -34,6 +37,9 @@ import com.youzu.clan.base.util.InitUtils;
 import com.youzu.clan.base.util.theme.ThemeUtils;
 import com.youzu.clan.main.base.forumnav.DBForumNavUtils;
 
+import java.io.InputStream;
+import java.net.HttpURLConnection;
+import java.net.URL;
 import java.util.List;
 
 @ContentView(R.layout.activity_guide)
@@ -159,7 +165,13 @@ public class GuideActivity extends BaseActivity {
             }
         });
 
-        mImageView.setImageResource(R.drawable.splash);
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                mImageView.setImageBitmap(getHttpBitmap("http://my.nuaa.edu.cn/forum_static/myapp/splash.png"));
+            }
+        }).start();
+
         progressBar();
     }
 
@@ -301,11 +313,6 @@ public class GuideActivity extends BaseActivity {
         }).start();
     }
 
-
-    private void showFailedSpalsh() {
-        mImageView.setImageResource(R.drawable.splash);
-    }
-
     private void toMain() {
 
         if (mProfileVariables == null || mProfileVariables.getMemberUid().equals("0")) {
@@ -333,5 +340,26 @@ public class GuideActivity extends BaseActivity {
         super.onActivityResult(arg0, arg1, arg2);
         toMain();
         finish();
+    }
+
+    /*
+     *动态获取splash
+     */
+    public static Bitmap getHttpBitmap(String url){
+        URL myFileURL;
+        Bitmap bitmap=null;
+        try{
+            myFileURL = new URL(url);
+            HttpURLConnection conn=(HttpURLConnection)myFileURL.openConnection();
+            conn.setConnectTimeout(10000);
+            conn.setDoInput(true);
+            conn.setUseCaches(false);
+            InputStream is = conn.getInputStream();
+            bitmap = BitmapFactory.decodeStream(is);
+            is.close();
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+        return bitmap;
     }
 }
