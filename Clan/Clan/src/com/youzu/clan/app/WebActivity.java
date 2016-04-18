@@ -140,7 +140,7 @@ public class WebActivity extends com.kit.extend.ui.web.WebActivity {
     @Override
     public void initWebView() {
         super.initWebView();
-
+        webFragment.getWebView().getSettings().setUserAgentString(webFragment.getWebView().getSettings().getUserAgentString() + " My_APP");
         webFragment.setGoToTopPosition(getGoToTopPosition());
 
         webFragment.setWebScrollListener(new LoadMoreWebView.WebScrollListener() {
