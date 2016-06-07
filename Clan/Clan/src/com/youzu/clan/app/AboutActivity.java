@@ -138,7 +138,7 @@ public class AboutActivity extends BaseActivity implements Handler.Callback {
 
     @OnClick(R.id.version)
     public void versionCheck(View view) {
-        //版本更新检测
+        //TODO: 版本更新检测
         UIHandler.sendMessage(AboutActivity.this, CHECK_NO_NEW_VERSION);
     }
 

@@ -153,17 +153,18 @@ public class GuideActivity extends BaseActivity {
 
         ClanUtils.loadMyFav(this);
 
-
         InitUtils.initShareSDK(getApplicationContext());
 
         //初始化广告配置
         InitUtils.initConfig(GuideActivity.this, new DoSomeThing() {
             @Override
             public void execute(Object... objects) {
-                ZogUtils.printLog(GuideActivity.class, "initConfig initConfig initConfig");
-                MessageUtils.sendMessage(mHander, INIT_CONFIG_END);
+            ZogUtils.printLog(GuideActivity.class, "initConfig initConfig initConfig");
+            MessageUtils.sendMessage(mHander, INIT_CONFIG_END);
             }
         });
+
+        mImageView.setImageResource(R.drawable.splash);
 
         new Thread(new Runnable() {
             @Override
@@ -192,37 +193,36 @@ public class GuideActivity extends BaseActivity {
      */
     private void initProfile() {
         ClanHttp.getProfile(this, new JSONCallback() {
-                    public void onSuccess(Context ctx, String str) {
-                        super.onSuccess(ctx, str);
-                        try {
-                            ProfileJson t = JsonUtils.parseObject(str, ProfileJson.class);
-                            if (t == null || t.getVariables() == null) {
-                                MessageUtils.sendMessage(mHander, INIT_PROFILE_END);
-                                return;
-                            }
-                            mProfileVariables = t.getVariables();
-                            ZogUtils.printError(GuideActivity.class, "mProfileVariables:" + mProfileVariables.getMemberUid());
-                        } catch (Exception e) {
-
-                        }
+            public void onSuccess(Context ctx, String str) {
+                super.onSuccess(ctx, str);
+                try {
+                    ProfileJson t = JsonUtils.parseObject(str, ProfileJson.class);
+                    if (t == null || t.getVariables() == null) {
                         MessageUtils.sendMessage(mHander, INIT_PROFILE_END);
-
+                        return;
                     }
+                    mProfileVariables = t.getVariables();
+                    ZogUtils.printError(GuideActivity.class, "mProfileVariables:" + mProfileVariables.getMemberUid());
+                } catch (Exception e) {
 
-                    @Override
-                    public void onFailed(Context cxt, int errorCode, String errorMsg) {
-                        MessageUtils.sendMessage(mHander, INIT_PROFILE_END);
-                    }
                 }
-        );
+                MessageUtils.sendMessage(mHander, INIT_PROFILE_END);
+
+            }
+
+            @Override
+            public void onFailed(Context cxt, int errorCode, String errorMsg) {
+                MessageUtils.sendMessage(mHander, INIT_PROFILE_END);
+            }
+        });
     }
 
     private void initForumData() {
         InitUtils.preLoadForumData(GuideActivity.this, new DoSomeThing() {
             @Override
             public void execute(Object... object) {
-                ZogUtils.printLog(GuideActivity.class, "initForumData initForumData initForumData");
-                MessageUtils.sendMessage(mHander, INIT_FORUM_DATA_END);
+            ZogUtils.printLog(GuideActivity.class, "initForumData initForumData initForumData");
+            MessageUtils.sendMessage(mHander, INIT_FORUM_DATA_END);
             }
         });
     }
@@ -232,8 +232,8 @@ public class GuideActivity extends BaseActivity {
         InitUtils.initHomePageConfig(GuideActivity.this, new DoSomeThing() {
             @Override
             public void execute(Object... objects) {
-                ZogUtils.printLog(GuideActivity.class, "initHomePageConfig initHomePageConfig initHomePageConfig");
-                MessageUtils.sendMessage(mHander, INIT_HOME_PAGE_CONFIG_END);
+            ZogUtils.printLog(GuideActivity.class, "initHomePageConfig initHomePageConfig initHomePageConfig");
+            MessageUtils.sendMessage(mHander, INIT_HOME_PAGE_CONFIG_END);
             }
         });
     }
@@ -243,8 +243,8 @@ public class GuideActivity extends BaseActivity {
         InitUtils.initContentConfig(GuideActivity.this, new DoSomeThing() {
             @Override
             public void execute(Object... objects) {
-                ZogUtils.printLog(GuideActivity.class, "initContentConfig initContentConfig initContentConfig");
-                MessageUtils.sendMessage(mHander, INIT_CONTENT_CONFIG_END);
+            ZogUtils.printLog(GuideActivity.class, "initContentConfig initContentConfig initContentConfig");
+            MessageUtils.sendMessage(mHander, INIT_CONTENT_CONFIG_END);
             }
         });
     }
@@ -256,75 +256,68 @@ public class GuideActivity extends BaseActivity {
         new Thread(new Runnable() {
             @Override
             public void run() {
+            long time = 0;
+            while (!isInitError) {
+                int i = progressBar.getProgress();
+                int max = progressBar.getMax();
 
-                long time = 0;
-                while (!isInitError) {
-                    int i = progressBar.getProgress();
-                    int max = progressBar.getMax();
-
-                    if (i == 99 && initData < 4) {
-                        //进度快走完了，但是数据结构还没有都完成
-                        //不进行进度增加
-                        ZogUtils.printError(GuideActivity.class,"time="+time);
+                if (i == 99 && initData < 4) {
+                    //进度快走完了，但是数据结构还没有都完成
+                    //不进行进度增加
+                    ZogUtils.printError(GuideActivity.class,"time="+time);
+                } else {
+                    i++;
+                }
+                int v;
+                if (i / 25 > initData) {
+                    if (i == 99) {
+                        v = 5;
+                    } else if (i > 75) {
+                        v = 20;
+                    } else if (i > 50) {
+                        v = 15;
                     } else {
+                        v = 10;
+                    }
+                } else {
+                    if (initData >= 4) {
                         i++;
-                    }
-                    int v;
-                    if (i / 25 > initData) {
-                        if (i == 99) {
-                            v = 5;
-                        } else if (i > 75) {
-                            v = 20;
-                        } else if (i > 50) {
-                            v = 15;
-                        } else {
-                            v = 10;
-                        }
+                        v = 1;
                     } else {
-                        if (initData >= 4) {
-                            i++;
-                            v = 1;
-                        } else {
-                            v = 5;
-                        }
-                    }
-
-                    progressBar.setProgress(i);
-                    if (i >= max) {
-                        long delayTime = showTime * 1000;
-                        if (time > delayTime) {
-                            delayTime = 0;
-                        } else {
-                            delayTime -= time;
-                        }
-
-                        mHander.postDelayed(mToMainRunnable, delayTime);
-                        break;
-                    }
-
-                    try {
-                        time += 50 * v;
-                        Thread.sleep(50 * v);
-                    } catch (Exception e) {
-                        e.printStackTrace();
+                        v = 5;
                     }
                 }
+
+                progressBar.setProgress(i);
+                if (i >= max) {
+                    long delayTime = showTime * 1000;
+                    if (time > delayTime) {
+                        delayTime = 0;
+                    } else {
+                        delayTime -= time;
+                    }
+
+                    mHander.postDelayed(mToMainRunnable, delayTime);
+                    break;
+                }
+
+                try {
+                    time += 50 * v;
+                    Thread.sleep(50 * v);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
             }
         }).start();
     }
 
     private void toMain() {
-
         if (mProfileVariables == null || mProfileVariables.getMemberUid().equals("0")) {
             AppSPUtils.setLoginInfo(this, false, "0", "");
         }
-
-
         ZogUtils.printLog(GuideActivity.class, "toMain toMain toMain");
-
-
         toMainActivity(ClanUtils.getMain(this));
-
     }
 
     private void toMainActivity(Class clazz) {
