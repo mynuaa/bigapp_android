@@ -91,7 +91,7 @@
             app:WithItemTextView_name="@string/z_act_publish_item_name_required"
             app:WithItemTextView_name_color="@color/text_black_content" />
 
-        <com.youzu.clan.base.widget.InnerGridView
+        <cn.edu.nuaa.my.base.widget.InnerGridView
             android:id="@+id/gridview"
             android:layout_width="match_parent"
             android:layout_height="match_parent"

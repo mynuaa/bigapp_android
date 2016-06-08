@@ -30,14 +30,14 @@
         android:icon="@drawable/ic_forum_sub"
         android:title="sub"
         support:showAsAction="always"
-        support:actionProviderClass="com.youzu.clan.forum.ForumFilterProvider"
+        support:actionProviderClass="cn.edu.nuaa.my.forum.ForumFilterProvider"
         />-->
    <!-- <item
         android:id="@+id/action_filter"
         android:icon="@drawable/ic_forum_filter"
         android:title="filter"
         support:showAsAction="always" 
-        support:actionProviderClass="com.youzu.clan.forum.ForumFilterProvider"
+        support:actionProviderClass="cn.edu.nuaa.my.forum.ForumFilterProvider"
         />-->
 
     <!--<item-->

@@ -119,12 +119,12 @@
 
 
 
--dontwarn com.youzu.clan.**
--keep class com.youzu.clan.**{*;}
+-dontwarn cn.edu.nuaa.my.**
+-keep class cn.edu.nuaa.my.**{*;}
 
 
 
--keep public class com.youzu.clan.thread.ThreadDetailActivity$JavaScriptInterface
--keepclassmembers class com.youzu.clan.thread.ThreadDetailActivity$JavaScriptInterface {*;}
--keepattributes com.youzu.clan.thread.ThreadDetailActivity$JavaScriptInterface
+-keep public class cn.edu.nuaa.my.thread.ThreadDetailActivity$JavaScriptInterface
+-keepclassmembers class cn.edu.nuaa.my.thread.ThreadDetailActivity$JavaScriptInterface {*;}
+-keepattributes cn.edu.nuaa.my.thread.ThreadDetailActivity$JavaScriptInterface
 -keepattributes *Annotation*

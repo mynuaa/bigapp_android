@@ -9,7 +9,7 @@
 
     <include layout="@layout/include_new_friends" />
 
-    <com.youzu.clan.base.widget.list.RefreshListView
+    <cn.edu.nuaa.my.base.widget.list.RefreshListView
         android:id="@+id/list"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

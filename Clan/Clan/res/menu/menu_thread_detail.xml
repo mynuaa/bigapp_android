@@ -27,7 +27,7 @@
 
     <item
         android:id="@+id/action_more"
-        support:actionProviderClass="com.youzu.clan.thread.detail.MoreActionProvider"
+        support:actionProviderClass="cn.edu.nuaa.my.thread.detail.MoreActionProvider"
         android:icon="@drawable/actionbar_icon_more"
         android:title="@string/more"
         support:showAsAction="always" />

@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:background="@color/background">
 
-    <com.youzu.clan.base.widget.list.SearchRefreshListview
+    <cn.edu.nuaa.my.base.widget.list.SearchRefreshListview
         android:id="@+id/searchListView"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"

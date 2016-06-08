@@ -107,7 +107,7 @@
             android:orientation="vertical">
 
 
-            <com.youzu.clan.base.widget.GoBackTextView
+            <cn.edu.nuaa.my.base.widget.GoBackTextView
                 android:id="@+id/gtvClearCache"
                 style="@style/go_textview"
                 android:layout_width="match_parent"

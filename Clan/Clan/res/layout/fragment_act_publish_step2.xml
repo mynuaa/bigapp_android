@@ -84,7 +84,7 @@
 
         <include layout="@layout/z_view_line" />
 
-        <com.youzu.clan.base.widget.InnerGridView
+        <cn.edu.nuaa.my.base.widget.InnerGridView
             android:id="@+id/gridView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"

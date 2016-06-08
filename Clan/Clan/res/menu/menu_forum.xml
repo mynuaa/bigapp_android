@@ -17,13 +17,13 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:support="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="com.youzu.clan.forum.ForumActivity">
+    tools:context="cn.edu.nuaa.my.forum.ForumActivity">
 
     <item
         android:id="@+id/action_more"
         android:icon="@drawable/ic_menu_white_nav_1_9"
         android:title="@string/new_thread"
-        support:actionProviderClass="com.youzu.clan.forum.ForumMoreActionProvider"
+        support:actionProviderClass="cn.edu.nuaa.my.forum.ForumMoreActionProvider"
         support:showAsAction="always" />
 
     <!--<item-->

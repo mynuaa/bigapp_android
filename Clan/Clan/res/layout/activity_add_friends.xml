@@ -59,7 +59,7 @@
 
         <include layout="@layout/include_line" />
 
-        <com.youzu.clan.base.widget.list.RefreshListView
+        <cn.edu.nuaa.my.base.widget.list.RefreshListView
             android:id="@+id/listView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"

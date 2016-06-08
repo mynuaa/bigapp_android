@@ -122,42 +122,42 @@
 -keep interface com.nineoldandroids.**
 -keep class com.nineoldandroids.**{*;}
 
--dontwarn com.youzu.clan.base.callback.**
--keep class com.youzu.clan.base.callback.**{*;}
--keep class * extends com.youzu.clan.base.callback.**
+-dontwarn cn.edu.nuaa.my.base.callback.**
+-keep class cn.edu.nuaa.my.base.callback.**{*;}
+-keep class * extends cn.edu.nuaa.my.base.callback.**
 
--dontwarn com.youzu.clan.base.common.**
--keep class com.youzu.clan.base.common.**{*;}
+-dontwarn cn.edu.nuaa.my.base.common.**
+-keep class cn.edu.nuaa.my.base.common.**{*;}
 
--dontwarn com.youzu.clan.base.config.**
--keep class com.youzu.clan.base.config.**{*;}
+-dontwarn cn.edu.nuaa.my.base.config.**
+-keep class cn.edu.nuaa.my.base.config.**{*;}
 
--dontwarn com.youzu.clan.base.enums.**
--keep class com.youzu.clan.base.enums.**{*;}
+-dontwarn cn.edu.nuaa.my.base.enums.**
+-keep class cn.edu.nuaa.my.base.enums.**{*;}
 
-#-dontwarn com.youzu.clan.base.util.**
-#-keep class com.youzu.clan.base.util.**{*;}
+#-dontwarn cn.edu.nuaa.my.base.util.**
+#-keep class cn.edu.nuaa.my.base.util.**{*;}
 
--keep class com.youzu.clan.base.util.ClanBaseUtils {
+-keep class cn.edu.nuaa.my.base.util.ClanBaseUtils {
     *** getFormhash(***);
     *** getAllowUpload(***);
     *** dealFail(***,***);
 }
 
 
--dontwarn com.youzu.clan.base.json.**
--keep class com.youzu.clan.base.json.**{*;}
+-dontwarn cn.edu.nuaa.my.base.json.**
+-keep class cn.edu.nuaa.my.base.json.**{*;}
 
 
--dontwarn com.youzu.clan.base.widget.**
--keep class com.youzu.clan.base.widget.**{*;}
+-dontwarn cn.edu.nuaa.my.base.widget.**
+-keep class cn.edu.nuaa.my.base.widget.**{*;}
 
 
--dontwarn com.youzu.clan.base.net.**
--keep class com.youzu.clan.base.net.**{*;}
+-dontwarn cn.edu.nuaa.my.base.net.**
+-keep class cn.edu.nuaa.my.base.net.**{*;}
 
-#-dontwarn com.youzu.clan.base.json.mobclickagent.**
-#-keep class com.youzu.clan.base.json.mobclickagent.**{*;}
+#-dontwarn cn.edu.nuaa.my.base.json.mobclickagent.**
+#-keep class cn.edu.nuaa.my.base.json.mobclickagent.**{*;}
 
 
 -keepclassmembers public class * {
@@ -180,6 +180,6 @@
 
 
 #
-#-dontwarn com.youzu.clan.base.**
-#-keep class com.youzu.clan.base.**{*;}
+#-dontwarn cn.edu.nuaa.my.base.**
+#-keep class cn.edu.nuaa.my.base.**{*;}
 

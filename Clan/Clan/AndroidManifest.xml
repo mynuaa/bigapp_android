@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.youzu.clan"
+    package="cn.edu.nuaa.my"
     android:versionCode="@integer/version_code"
     android:versionName="@string/version_name">
 
@@ -16,13 +16,13 @@
         android:smallScreens="true" />
 
     <application
-        android:name="com.youzu.clan.app.ClanApplication"
+        android:name="cn.edu.nuaa.my.app.ClanApplication"
         android:allowBackup="true"
         android:hardwareAccelerated="false"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name">
         <activity
-            android:name="com.youzu.clan.guide.GuideActivity"
+            android:name="cn.edu.nuaa.my.guide.GuideActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"
             android:theme="@style/FullscreenTheme">
@@ -37,7 +37,7 @@
         </activity>
 
         <activity
-            android:name="com.youzu.clan.main.qqstyle.QQStyleMainActivity"
+            android:name="cn.edu.nuaa.my.main.qqstyle.QQStyleMainActivity"
             android:hardwareAccelerated="true"
             android:icon="@drawable/ic_launcher"
             android:label="@string/forum_name"
@@ -45,7 +45,7 @@
             android:screenOrientation="portrait"
             android:theme="@style/NoActionBarTheme" />
         <activity
-            android:name="com.youzu.clan.main.sliding.SlidingStyleMainActivity"
+            android:name="cn.edu.nuaa.my.main.sliding.SlidingStyleMainActivity"
             android:hardwareAccelerated="true"
             android:icon="@drawable/ic_launcher"
             android:label="@string/forum_name"
@@ -53,7 +53,7 @@
             android:screenOrientation="portrait"
             android:theme="@style/ActionBarTheme" />
         <activity
-            android:name="com.youzu.clan.main.wechatstyle.WeChatStyleMainActivity"
+            android:name="cn.edu.nuaa.my.main.wechatstyle.WeChatStyleMainActivity"
             android:icon="@drawable/ic_launcher"
             android:label="@string/forum_name"
             android:launchMode="singleTask"
@@ -61,7 +61,7 @@
             android:theme="@style/NoActionBarThemeYellowTabPageIndicator" />
 
         <activity
-            android:name="com.youzu.clan.main.bottomtab.BottomTabMainActivity"
+            android:name="cn.edu.nuaa.my.main.bottomtab.BottomTabMainActivity"
             android:icon="@drawable/ic_launcher"
             android:label="@string/forum_name"
             android:launchMode="singleTask"
@@ -69,7 +69,7 @@
             android:theme="@style/ActionBarTheme" />
 
         <activity
-            android:name="com.youzu.clan.main.android.PureAndroidMainActivity"
+            android:name="cn.edu.nuaa.my.main.android.PureAndroidMainActivity"
             android:icon="@drawable/ic_launcher"
             android:label="@string/forum_name"
             android:launchMode="singleTask"
@@ -78,21 +78,21 @@
 
 
         <activity
-            android:name="com.youzu.clan.login.LoginActivity"
+            android:name="cn.edu.nuaa.my.login.LoginActivity"
             android:label="@string/login"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"
             android:theme="@style/ActionBarTheme" />
 
         <activity
-            android:name="com.youzu.clan.login.BindActivity"
+            android:name="cn.edu.nuaa.my.login.BindActivity"
             android:label="@string/bind_account"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"
             android:theme="@style/ActionBarTheme" />
 
         <activity
-            android:name="com.youzu.clan.login.WebLoginActivity"
+            android:name="cn.edu.nuaa.my.login.WebLoginActivity"
             android:hardwareAccelerated="true"
             android:label="@string/login"
             android:launchMode="singleTop"
@@ -100,77 +100,77 @@
             android:theme="@style/ActionBarTheme" />
 
         <activity
-            android:name="com.youzu.clan.login.RegisterActivity"
+            android:name="cn.edu.nuaa.my.login.RegisterActivity"
             android:label="@string/register"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"
             android:theme="@style/ActionBarTheme" />
         <activity
-            android:name="com.youzu.clan.login.CallBackWebActivity"
+            android:name="cn.edu.nuaa.my.login.CallBackWebActivity"
             android:hardwareAccelerated="true"
             android:label="@string/register"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"
             android:theme="@style/ActionBarTheme" />
         <activity
-            android:name="com.youzu.clan.login.YZLoginActivity"
+            android:name="cn.edu.nuaa.my.login.YZLoginActivity"
             android:label="@string/yz_login"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"
             android:theme="@style/ActionBarTheme" />
         <activity
-            android:name="com.youzu.clan.message.pm.MyPMActivityOld"
+            android:name="cn.edu.nuaa.my.message.pm.MyPMActivityOld"
             android:label="@string/my_pm"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"
             android:theme="@style/ActionBarTheme" />
         <activity
-            android:name="com.youzu.clan.message.pm.MyPMActivity"
+            android:name="cn.edu.nuaa.my.message.pm.MyPMActivity"
             android:label="@string/my_pm"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"
             android:theme="@style/ActionBarTheme" />
         <activity
-            android:name="com.youzu.clan.myfav.MyFavActivity"
+            android:name="cn.edu.nuaa.my.myfav.MyFavActivity"
             android:label="@string/my_favories"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"
             android:theme="@style/ActionBarTheme.Tab.Small" />
 
         <activity
-            android:name="com.youzu.clan.article.ArticleListActivity"
+            android:name="cn.edu.nuaa.my.article.ArticleListActivity"
             android:label="@string/article_list"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"
             android:theme="@style/ActionBarTheme" />
         <activity
-            android:name="com.youzu.clan.article.ArticleDetailActivity"
+            android:name="cn.edu.nuaa.my.article.ArticleDetailActivity"
             android:hardwareAccelerated="true"
             android:label="@string/article_detail"
             android:launchMode="standard"
             android:screenOrientation="portrait"
             android:theme="@style/ActionBarTheme" />
         <activity
-            android:name="com.youzu.clan.thread.detail.ThreadDetailActivity"
+            android:name="cn.edu.nuaa.my.thread.detail.ThreadDetailActivity"
             android:hardwareAccelerated="true"
             android:label="@string/thread_detail"
             android:launchMode="standard"
             android:screenOrientation="portrait"
             android:theme="@style/ActionBarTheme" />
         <activity
-            android:name="com.youzu.clan.thread.ThreadReplyActivity"
+            android:name="cn.edu.nuaa.my.thread.ThreadReplyActivity"
             android:label="@string/thread_reply"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"
             android:theme="@style/ActionBarTheme" />
         <activity
-            android:name="com.youzu.clan.profile.thread.OwnerThreadActivity"
+            android:name="cn.edu.nuaa.my.profile.thread.OwnerThreadActivity"
             android:label="@string/my_thread"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"
             android:theme="@style/ActionBarTheme.Tab.Small" />
         <activity
-            android:name="com.youzu.clan.profile.thread.MyThreadActivity"
+            android:name="cn.edu.nuaa.my.profile.thread.MyThreadActivity"
             android:label="@string/my_thread"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"
@@ -182,87 +182,87 @@
         <!--android:screenOrientation="portrait"-->
         <!--android:theme="@style/ActionBarTheme.Tab.Small" />-->
         <activity
-            android:name="com.youzu.clan.profile.homepage.HomePageActivity"
+            android:name="cn.edu.nuaa.my.profile.homepage.HomePageActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"
             android:theme="@style/NoActionBarTheme" />
         <activity
-            android:name="com.youzu.clan.message.pm.ChatActivity"
+            android:name="cn.edu.nuaa.my.message.pm.ChatActivity"
             android:label="@string/thread_detail"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"
             android:theme="@style/ActionBarTheme" />
         <activity
-            android:name="com.youzu.clan.forum.ForumActivity"
+            android:name="cn.edu.nuaa.my.forum.ForumActivity"
             android:hardwareAccelerated="true"
             android:launchMode="standard"
             android:screenOrientation="portrait"
             android:theme="@style/ActionBarTheme" />
         <activity
-            android:name="com.youzu.clan.forum.ForumTypeActivity"
+            android:name="cn.edu.nuaa.my.forum.ForumTypeActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"
             android:theme="@style/ActionBarTheme" />
         <activity
-            android:name="com.youzu.clan.thread.ThreadNewActivity"
+            android:name="cn.edu.nuaa.my.thread.ThreadNewActivity"
             android:label="@string/new_thread"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"
             android:theme="@style/ActionBarTheme" />
         <activity
-            android:name="com.youzu.clan.thread.ThreadReportActivity"
+            android:name="cn.edu.nuaa.my.thread.ThreadReportActivity"
             android:label="@string/report"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"
             android:theme="@style/ActionBarTheme" />
 
         <activity
-            android:name="com.youzu.clan.thread.ThreadPublishActivity"
+            android:name="cn.edu.nuaa.my.thread.ThreadPublishActivity"
             android:label="@string/new_thread"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"
             android:theme="@style/ActionBarTheme" />
 
         <activity
-            android:name="com.youzu.clan.thread.deal.ThreadDealActivity"
+            android:name="cn.edu.nuaa.my.thread.deal.ThreadDealActivity"
             android:label="@string/default_value"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"
             android:theme="@style/ActionBarTheme" />
         <activity
-            android:name="com.youzu.clan.common.images.PicSelectorActivity"
+            android:name="cn.edu.nuaa.my.common.images.PicSelectorActivity"
             android:label=""
             android:launchMode="singleTop"
             android:screenOrientation="portrait"
             android:theme="@style/ActionBarTheme" />
         <activity
-            android:name="com.youzu.clan.common.images.ImagesLookerActivity"
+            android:name="cn.edu.nuaa.my.common.images.ImagesLookerActivity"
             android:label=""
             android:launchMode="singleTop"
             android:screenOrientation="portrait"
             android:theme="@style/ActionBarTheme" />
         <activity
-            android:name="com.youzu.clan.app.WebActivity"
+            android:name="cn.edu.nuaa.my.app.WebActivity"
             android:hardwareAccelerated="true"
             android:label=""
             android:launchMode="singleTop"
             android:screenOrientation="portrait"
             android:theme="@style/ActionBarTheme" />
         <activity
-            android:name="com.youzu.clan.video.VideoPlayWebActivity"
+            android:name="cn.edu.nuaa.my.video.VideoPlayWebActivity"
             android:hardwareAccelerated="true"
             android:label=""
             android:launchMode="singleTop"
             android:screenOrientation="landscape"
             android:theme="@style/FullscreenTheme" />
         <activity
-            android:name="com.youzu.clan.setting.SettingsActivity"
+            android:name="cn.edu.nuaa.my.setting.SettingsActivity"
             android:label="@string/settings"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"
             android:theme="@style/ActionBarTheme" />
         <activity
-            android:name="com.youzu.clan.app.AboutActivity"
+            android:name="cn.edu.nuaa.my.app.AboutActivity"
             android:label="@string/about"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"
@@ -270,77 +270,77 @@
 
 
         <activity
-            android:name="com.youzu.clan.setting.supersetting.SuperSettingsActivity"
+            android:name="cn.edu.nuaa.my.setting.supersetting.SuperSettingsActivity"
             android:label="@string/super_settings"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"
             android:theme="@style/ActionBarTheme.Tab.Small" />
 
         <activity
-            android:name="com.youzu.clan.search.SearchActivity"
+            android:name="cn.edu.nuaa.my.search.SearchActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"
             android:theme="@style/ActionBarTheme"
             android:windowSoftInputMode="stateVisible|adjustResize" />
 
         <activity
-            android:name="com.youzu.clan.friends.FriendsActivity"
+            android:name="cn.edu.nuaa.my.friends.FriendsActivity"
             android:label="@string/my_friends_title"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"
             android:theme="@style/ActionBarTheme" />
         <activity
-            android:name="com.youzu.clan.friends.AddFriendsActivity"
+            android:name="cn.edu.nuaa.my.friends.AddFriendsActivity"
             android:label="@string/add_friends_title"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"
             android:theme="@style/ActionBarTheme" />
         <activity
-            android:name="com.youzu.clan.friends.SearchFriendsActivity"
+            android:name="cn.edu.nuaa.my.friends.SearchFriendsActivity"
             android:label="@string/search_friends"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"
             android:theme="@style/ActionBarTheme"
             android:windowSoftInputMode="stateVisible|adjustResize" />
         <activity
-            android:name="com.youzu.clan.friends.NewFriendsActivity"
+            android:name="cn.edu.nuaa.my.friends.NewFriendsActivity"
             android:label="@string/new_friends_title"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"
             android:theme="@style/ActionBarTheme" />
         <activity
-            android:name="com.youzu.clan.friends.ApplyFriendsActivity"
+            android:name="cn.edu.nuaa.my.friends.ApplyFriendsActivity"
             android:label="@string/apply_friends_title"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"
             android:theme="@style/ActionBarTheme" />
 
         <activity
-            android:name="com.youzu.clan.act.apply.ActApplyActivity"
+            android:name="cn.edu.nuaa.my.act.apply.ActApplyActivity"
             android:label="@string/apply_act_title"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"
             android:theme="@style/ActionBarTheme" />
 
         <activity
-            android:name="com.youzu.clan.act.publish.ActPublishActivity"
+            android:name="cn.edu.nuaa.my.act.publish.ActPublishActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"
             android:theme="@style/ActionBarTheme" />
         <activity
-            android:name="com.youzu.clan.act.publish.ActSelectTypeActivity"
+            android:name="cn.edu.nuaa.my.act.publish.ActSelectTypeActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"
             android:theme="@style/ActionBarTheme" />
         <activity
-            android:name="com.youzu.clan.act.manage.ActManageActivity"
+            android:name="cn.edu.nuaa.my.act.manage.ActManageActivity"
             android:hardwareAccelerated="true"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"
             android:theme="@style/ActionBarTheme" />
 
         <activity
-            android:name="com.youzu.clan.main.bottomtab.MenuJumpActivity"
+            android:name="cn.edu.nuaa.my.main.bottomtab.MenuJumpActivity"
             android:label="@string/default_value"
             android:launchMode="standard"
             android:screenOrientation="portrait"
@@ -379,7 +379,7 @@
             android:theme="@android:style/Theme.Translucent.NoTitleBar" />
 
         <activity
-            android:name="com.youzu.clan.wxapi.WXEntryActivity"
+            android:name="cn.edu.nuaa.my.wxapi.WXEntryActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:exported="true"
             android:screenOrientation="portrait"
@@ -448,7 +448,7 @@
         <activity android:name="cn.sharesdk.feedback.ContactActivity" />
         <!-- analysisSDK End -->
 
-        <service android:name="com.youzu.clan.app.service.ClanService" />
+        <service android:name="cn.edu.nuaa.my.app.service.ClanService" />
 
         <!-- Required SDK核心功能-->
         <activity
@@ -459,7 +459,7 @@
                 <action android:name="cn.jpush.android.ui.PushActivity" />
 
                 <category android:name="android.intent.category.DEFAULT" />
-                <category android:name="com.youzu.clan" />
+                <category android:name="cn.edu.nuaa.my" />
             </intent-filter>
         </activity>
         <!-- Required  SDK核心功能-->
@@ -490,7 +490,7 @@
             android:exported="true">
             <intent-filter>
                 <action android:name="cn.jpush.android.intent.DaemonService" />
-                <category android:name="com.youzu.clan" />
+                <category android:name="cn.edu.nuaa.my" />
             </intent-filter>
         </service>
 
@@ -503,7 +503,7 @@
             <intent-filter android:priority="1000">
                 <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY" />
                 <!--Required  显示通知栏 -->
-                <category android:name="com.youzu.clan" />
+                <category android:name="cn.edu.nuaa.my" />
             </intent-filter>
             <intent-filter>
                 <action android:name="android.intent.action.USER_PRESENT" />
@@ -538,7 +538,7 @@
         <!--&lt;!&ndash;Optional 用户接受Rich Push Javascript 回调函数的intent&ndash;&gt;-->
         <!--<action android:name="cn.jpush.android.intent.CONNECTION" />-->
         <!--&lt;!&ndash; 接收网络变化 连接/断开 since 1.6.3 &ndash;&gt;-->
-        <!--<category android:name="com.youzu.clan" />-->
+        <!--<category android:name="cn.edu.nuaa.my" />-->
         <!--</intent-filter>-->
         <!--</receiver>-->
 
@@ -577,11 +577,11 @@
 
     <!-- Required 自定义用来收发消息的相关权限 -->
     <permission
-        android:name="com.youzu.clan.permission.JPUSH_MESSAGE"
+        android:name="cn.edu.nuaa.my.permission.JPUSH_MESSAGE"
         android:protectionLevel="signature" />
 
     <!-- Required  一些系统要求的权限，如访问网络等-->
-    <uses-permission android:name="com.youzu.clan.permission.JPUSH_MESSAGE" />
+    <uses-permission android:name="cn.edu.nuaa.my.permission.JPUSH_MESSAGE" />
     <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />

@@ -43,7 +43,7 @@ android {
         minSdkVersion 9
         targetSdkVersion 21
         versionCode 8888
-        versionName "1.0.0"
+        versionName "1.0.5"
 //        multiDexEnabled true
 
         manifestPlaceholders = [
@@ -103,7 +103,7 @@ android {
 
     productFlavors {
         clan {
-            applicationId "com.youzu.clan"
+            applicationId "cn.edu.nuaa.my"
         }
     }
 

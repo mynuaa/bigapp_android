@@ -41,7 +41,7 @@
                 android:visibility="visible" />
 
 
-            <com.youzu.clan.base.widget.SuperViewPager
+            <cn.edu.nuaa.my.base.widget.SuperViewPager
                 android:id="@+id/pager"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"

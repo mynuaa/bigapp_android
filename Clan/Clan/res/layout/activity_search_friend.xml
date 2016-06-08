@@ -15,7 +15,7 @@
 
         <include layout="@layout/include_search" />
 
-        <com.youzu.clan.base.widget.list.SearchFriendsListview
+        <cn.edu.nuaa.my.base.widget.list.SearchFriendsListview
             android:id="@+id/searchListView"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"

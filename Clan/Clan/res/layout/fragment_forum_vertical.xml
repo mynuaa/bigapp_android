@@ -30,7 +30,7 @@
         android:layout_height="fill_parent"
         android:orientation="horizontal">
 
-        <com.youzu.clan.base.widget.list.RefreshListView
+        <cn.edu.nuaa.my.base.widget.list.RefreshListView
             android:id="@+id/list"
             android:layout_width="88dp"
             android:layout_height="match_parent"

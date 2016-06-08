@@ -9,7 +9,7 @@
     app:use_face="false">
 
 
-    <com.youzu.clan.message.pm.ChatListView
+    <cn.edu.nuaa.my.message.pm.ChatListView
         android:id="@+id/list"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
