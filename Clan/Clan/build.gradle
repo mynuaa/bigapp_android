@@ -38,6 +38,11 @@ android {
     compileSdkVersion 21
     buildToolsVersion "22.0.1"
 
+    packagingOptions {
+        exclude 'META-INF/maven/com.nostra13.universalimageloader/universal-image-loader/pom.properties'
+        exclude 'META-INF/maven/com.nostra13.universalimageloader/universal-image-loader/pom.xml'
+    }
+
     defaultConfig {
         applicationId 'cn.edu.nuaa.my'
         minSdkVersion 9
