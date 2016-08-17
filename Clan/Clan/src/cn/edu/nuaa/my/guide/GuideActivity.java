@@ -16,6 +16,8 @@ import com.kit.utils.ListUtils;
 import com.kit.utils.MessageUtils;
 import com.kit.utils.ZogUtils;
 import com.kit.widget.numberprogressbar.NumberProgressBar;
+import com.loveplusplus.update.UpdateChecker;
+import com.shelwee.update.UpdateHelper;
 import com.youzu.android.framework.JsonUtils;
 import com.youzu.android.framework.view.annotation.ContentView;
 import com.youzu.android.framework.view.annotation.ViewInject;
@@ -174,6 +176,11 @@ public class GuideActivity extends BaseActivity {
         }).start();
 
         progressBar();
+        UpdateHelper updateHelper = new UpdateHelper.Builder(this)
+                .checkUrl("http://my.nuaa.edu.cn/bigapp_android/version.php")
+                .isAutoInstall(false) //设置为false需在下载完手动点击安装;默认值为true，下载后自动安装。
+                .build();
+        updateHelper.check();
     }
 
     @Override

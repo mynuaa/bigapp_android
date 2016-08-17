@@ -17,6 +17,8 @@ include ':ZUtilsExt'
 include ':ZUtilsExtWidget'
 //include ':SwitchButton'
 include ':Clan'
+include':UpdateHelper'
+project(':UpdateHelper').projectDir = new File('libs/UpdateHelper')
 project(':Clan').projectDir = new File('Clan/Clan')
 project(':AppUtils').projectDir = new File('libs/AppUtils')
 project(':pulltorefresh').projectDir = new File('libs/pulltorefresh')

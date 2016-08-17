@@ -449,6 +449,9 @@
         <!-- analysisSDK End -->
 
         <service android:name="cn.edu.nuaa.my.app.service.ClanService" />
+        <service
+           android:name="com.loveplusplus.update.DownloadService"
+            android:exported="true"/>
 
         <!-- Required SDK核心功能-->
         <activity
@@ -482,6 +485,11 @@
 
             </intent-filter>
         </service>
+
+        <!-- 自动更新功能-->
+        <service
+            android:name="com.loveplusplus.update.DownloadService"
+            android:exported="true"/>
 
         <!-- Required SDK 核心功能-->
         <service
@@ -596,6 +604,6 @@
 
     <!-- ZUK角标 -->
     <uses-permission android:name="android.permission.READ_APP_BADGE" />
-	
+
 
 </manifest>
