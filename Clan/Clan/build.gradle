@@ -21,6 +21,7 @@ dependencies {
     compile project(':EasterEgg')
     compile project(':ZUtilsExt')
     compile project(':ZUtilsExtWidget')
+    compile project(':UpdateHelper')
     //    compile project(':SwitchButton')
     // stock actionBar
     compile 'com.balysv.materialmenu:material-menu:1.5.4'

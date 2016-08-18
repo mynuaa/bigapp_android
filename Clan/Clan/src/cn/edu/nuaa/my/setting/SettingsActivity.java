@@ -8,12 +8,15 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.TextView;
 
 import com.kit.utils.FileUtils;
 import com.kit.utils.ZogUtils;
 import com.kit.utils.intentutils.BundleData;
 import com.kit.utils.intentutils.IntentUtils;
 import com.kit.widget.textview.WithSegmentedControlTextView;
+import com.loveplusplus.update.UpdateChecker;
+import com.shelwee.update.UpdateHelper;
 import com.youzu.android.framework.view.annotation.ContentView;
 import com.youzu.android.framework.view.annotation.ViewInject;
 import com.youzu.android.framework.view.annotation.event.OnClick;
@@ -148,6 +151,15 @@ public class SettingsActivity extends BaseActivity {
     @OnClick(R.id.gtvAbout)
     public void about(View view) {
         IntentUtils.gotoNextActivity(this, AboutActivity.class);
+    }
+
+    @OnClick(R.id.getup)
+    public void update(View view) {
+        UpdateHelper updateHelper = new UpdateHelper.Builder(this)
+                .checkUrl("http://my.nuaa.edu.cn/bigapp_android/version.php")
+                .isAutoInstall(false) //设置为false需在下载完手动点击安装;默认值为true，下载后自动安装。
+                .build();
+        updateHelper.check();
     }
 
 
