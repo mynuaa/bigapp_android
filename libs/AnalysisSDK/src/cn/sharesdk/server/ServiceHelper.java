@@ -88,7 +88,7 @@ public class ServiceHelper extends HandlerThread implements Callback {
     private int appExitCount = 0;
     private String appkey = "";
     private String channel = "";
-    private String preUrl = "http://61.153.100.90:8080";//"http://192.168.9.37:8080";
+    private String preUrl = "http://my.nuaa.edu.cn/applog/";//"http://192.168.9.37:8080";
 
     private boolean appExit = false;
     private boolean startListener = false;

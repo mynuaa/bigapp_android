@@ -8,19 +8,21 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
-import android.widget.TextView;
 
 import com.kit.utils.FileUtils;
 import com.kit.utils.ZogUtils;
 import com.kit.utils.intentutils.BundleData;
 import com.kit.utils.intentutils.IntentUtils;
 import com.kit.widget.textview.WithSegmentedControlTextView;
-import com.loveplusplus.update.UpdateChecker;
 import com.shelwee.update.UpdateHelper;
 import com.youzu.android.framework.view.annotation.ContentView;
 import com.youzu.android.framework.view.annotation.ViewInject;
 import com.youzu.android.framework.view.annotation.event.OnClick;
 import com.youzu.android.framework.view.annotation.event.OnRadioGroupCheckedChange;
+
+import java.util.ArrayList;
+import java.util.List;
+
 import cn.edu.nuaa.my.R;
 import cn.edu.nuaa.my.app.AboutActivity;
 import cn.edu.nuaa.my.app.CrashHandler;
@@ -37,9 +39,6 @@ import cn.edu.nuaa.my.base.util.ToastUtils;
 import cn.edu.nuaa.my.base.util.theme.ThemeUtils;
 import cn.edu.nuaa.my.setting.supersetting.SuperSettingCommonFragment;
 import cn.edu.nuaa.my.setting.supersetting.SuperSettingsActivity;
-
-import java.util.ArrayList;
-import java.util.List;
 
 
 @ContentView(R.layout.activity_settings)
@@ -156,7 +155,7 @@ public class SettingsActivity extends BaseActivity {
     @OnClick(R.id.getup)
     public void update(View view) {
         UpdateHelper updateHelper = new UpdateHelper.Builder(this)
-                .checkUrl("http://my.nuaa.edu.cn/bigapp_android/version.php")
+                .checkUrl("http://oceg1qe2m.bkt.clouddn.com/version.json")
                 .isAutoInstall(false) //设置为false需在下载完手动点击安装;默认值为true，下载后自动安装。
                 .build();
         updateHelper.check();

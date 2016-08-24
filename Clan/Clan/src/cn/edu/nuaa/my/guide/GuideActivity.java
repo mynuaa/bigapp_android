@@ -1,6 +1,5 @@
 package cn.edu.nuaa.my.guide;
 
-import android.app.ActionBar;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -16,11 +15,16 @@ import com.kit.utils.ListUtils;
 import com.kit.utils.MessageUtils;
 import com.kit.utils.ZogUtils;
 import com.kit.widget.numberprogressbar.NumberProgressBar;
-import com.loveplusplus.update.UpdateChecker;
 import com.shelwee.update.UpdateHelper;
 import com.youzu.android.framework.JsonUtils;
 import com.youzu.android.framework.view.annotation.ContentView;
 import com.youzu.android.framework.view.annotation.ViewInject;
+
+import java.io.InputStream;
+import java.net.HttpURLConnection;
+import java.net.URL;
+import java.util.List;
+
 import cn.edu.nuaa.my.R;
 import cn.edu.nuaa.my.app.ClanApplication;
 import cn.edu.nuaa.my.app.config.AppConfig;
@@ -38,11 +42,6 @@ import cn.edu.nuaa.my.base.util.ClanUtils;
 import cn.edu.nuaa.my.base.util.InitUtils;
 import cn.edu.nuaa.my.base.util.theme.ThemeUtils;
 import cn.edu.nuaa.my.main.base.forumnav.DBForumNavUtils;
-
-import java.io.InputStream;
-import java.net.HttpURLConnection;
-import java.net.URL;
-import java.util.List;
 
 @ContentView(R.layout.activity_guide)
 public class GuideActivity extends BaseActivity {
@@ -171,13 +170,13 @@ public class GuideActivity extends BaseActivity {
         new Thread(new Runnable() {
             @Override
             public void run() {
-                mImageView.setImageBitmap(getHttpBitmap("http://my.nuaa.edu.cn/forum_static/myapp/splash.png"));
+                mImageView.setImageBitmap(getHttpBitmap("http://oceg1qe2m.bkt.clouddn.com/images/splash.png"));
             }
         }).start();
 
         progressBar();
         UpdateHelper updateHelper = new UpdateHelper.Builder(this)
-                .checkUrl("http://my.nuaa.edu.cn/bigapp_android/version.php")
+                .checkUrl("http://oceg1qe2m.bkt.clouddn.com/version.json")
                 .isAutoInstall(false) //设置为false需在下载完手动点击安装;默认值为true，下载后自动安装。
                 .build();
         updateHelper.check();
