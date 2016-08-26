@@ -59,8 +59,8 @@
     <SinaWeibo
         Id="1"
         SortId="1"
-        AppKey="3552514107"
-        AppSecret="b234a863f8cfb50e4ec7c47ca0babba9"
+        AppKey="2571092456"
+        AppSecret="cfdd45d053bb865df6a5ceb4b1c53a11"
         RedirectUrl="https://api.weibo.com/oauth2/default.html"
         ShareByAppClient="false"
         Enable="true" />
@@ -97,24 +97,24 @@
     <Wechat
         Id="4"
         SortId="4"
-        AppId="wxb05003635a752c53"
-        AppSecret="1bf2e7110a83d2b1d2ce71c11f18ca36"
+        AppId="wx450a3e8b20d411d6"
+        AppSecret="25d58beb56b455a5c7d138da5bcea5d1"
         BypassApproval="false"
         Enable="true" />
     
     <WechatMoments
         Id="5"
         SortId="5"
-        AppId="wxb05003635a752c53"
-        AppSecret="1bf2e7110a83d2b1d2ce71c11f18ca36"
+        AppId="wx450a3e8b20d411d6"
+        AppSecret="25d58beb56b455a5c7d138da5bcea5d1"
         BypassApproval="false"
         Enable="true" />
         
 	<WechatFavorite
         Id="6"
         SortId="6"
-        AppId="wxb05003635a752c53"
-        AppSecret="1bf2e7110a83d2b1d2ce71c11f18ca36"
+        AppId="wx450a3e8b20d411d6"
+        AppSecret="25d58beb56b455a5c7d138da5bcea5d1"
         Enable="false" />
     
 	<!-- ShareByAppClient标识是否使用微博客户端分享，默认是false -->
