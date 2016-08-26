@@ -67,7 +67,8 @@ public class NotifyFragment extends EditableFragment implements OnEditListener {
 
 
         ClanHttpParams params = new ClanHttpParams(getActivity());
-        params.addQueryStringParameter("module", "notifyyyyyyyyyyyyyyyyyyyyyyyyyyyy");
+        params.addQueryStringParameter("module", "mynotelist");
+        //params.addQueryStringParameter("iyzmobile", "1");  需要重新写mapapter
         mAdapter = new MyPMAdatper(getActivity(), this, params);
         mAdapter.setOnDataSetChangedObserver(mObserver);
         mListView.setAdapter(mAdapter);
