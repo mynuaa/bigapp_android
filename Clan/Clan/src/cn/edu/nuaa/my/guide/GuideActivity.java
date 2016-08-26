@@ -176,7 +176,7 @@ public class GuideActivity extends BaseActivity {
 
         progressBar();
         UpdateHelper updateHelper = new UpdateHelper.Builder(this)
-                .checkUrl("http://oceg1qe2m.bkt.clouddn.com/version.json")
+                .checkUrl("http://oceg1qe2m.bkt.clouddn.com/version.json?no-cache")
                 .isAutoInstall(false) //设置为false需在下载完手动点击安装;默认值为true，下载后自动安装。
                 .build();
         updateHelper.check();
