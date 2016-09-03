@@ -5,48 +5,43 @@ import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.os.Bundle;
-import android.text.TextUtils;
-import android.util.SparseBooleanArray;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 
 import com.kit.utils.ZogUtils;
-import com.kit.utils.intentutils.IntentUtils;
 import com.youzu.android.framework.ViewUtils;
 import com.youzu.android.framework.view.annotation.ViewInject;
-import com.youzu.android.framework.view.annotation.event.OnClick;
 import com.youzu.android.framework.view.annotation.event.OnItemClick;
+
+import java.util.ArrayList;
+
 import cn.edu.nuaa.my.R;
 import cn.edu.nuaa.my.app.InjectDo;
 import cn.edu.nuaa.my.base.EditableFragment;
 import cn.edu.nuaa.my.base.callback.StringCallback;
 import cn.edu.nuaa.my.base.config.Url;
 import cn.edu.nuaa.my.base.json.BaseJson;
-import cn.edu.nuaa.my.base.json.mypm.Mypm;
+import cn.edu.nuaa.my.base.json.mypm.Notify;
 import cn.edu.nuaa.my.base.net.BaseHttp;
 import cn.edu.nuaa.my.base.net.ClanHttpParams;
 import cn.edu.nuaa.my.base.util.AppSPUtils;
 import cn.edu.nuaa.my.base.util.ClanBaseUtils;
 import cn.edu.nuaa.my.base.util.ClanUtils;
 import cn.edu.nuaa.my.base.util.StringUtils;
-import cn.edu.nuaa.my.base.util.jump.JumpChatUtils;
 import cn.edu.nuaa.my.base.widget.list.BaseRefreshAdapter;
 import cn.edu.nuaa.my.base.widget.list.OnDataSetChangedObserver;
 import cn.edu.nuaa.my.base.widget.list.OnEditListener;
 import cn.edu.nuaa.my.base.widget.list.RefreshListView;
-import cn.edu.nuaa.my.friends.NewFriendsActivity;
 
-import java.util.ArrayList;
-
-public class NotifyFragment extends EditableFragment implements OnEditListener {
+public class  NotifyFragment extends EditableFragment implements OnEditListener {
 
     @ViewInject(value = R.id.list)
     RefreshListView mListView;
 
 
-    private MyPMAdatper mAdapter;
+    private NotifyAdatper mAdatper;
 
     private static NotifyFragment fragment;
     private OnDataSetChangedObserver mObserver;
@@ -68,10 +63,10 @@ public class NotifyFragment extends EditableFragment implements OnEditListener {
 
         ClanHttpParams params = new ClanHttpParams(getActivity());
         params.addQueryStringParameter("module", "mynotelist");
-        //params.addQueryStringParameter("iyzmobile", "1");  需要重新写mapapter
-        mAdapter = new MyPMAdatper(getActivity(), this, params);
-        mAdapter.setOnDataSetChangedObserver(mObserver);
-        mListView.setAdapter(mAdapter);
+        params.addQueryStringParameter("iyzmobile", "1");
+        mAdatper = new NotifyAdatper(getActivity(), this, params);
+        mAdatper.setOnDataSetChangedObserver(mObserver);
+        mListView.setAdapter(mAdatper);
         mListView.setOnEditListener(this);
         AppSPUtils.saveNewMessage(getActivity(), 0);
 
@@ -93,20 +88,11 @@ public class NotifyFragment extends EditableFragment implements OnEditListener {
     @OnItemClick(R.id.list)
     public void onItemClick(AdapterView<?> parent, View view,
                             int position, long id) {
-        Mypm mypm = (Mypm) mAdapter.getItem(position);
+        Notify notify = (Notify) mAdatper.getItem(position);
 
-        ZogUtils.printLog(MyPMFragment.class, "mypm.getTousername():" + mypm.getTousername());
-
-        if (mypm != null) {
-            JumpChatUtils.gotoChat(getActivity(), mypm);
-        }
+        ZogUtils.printLog(Notify.class, "notify.getTousername():" + notify.getNote());
     }
 
-
-    @OnClick(R.id.newFriends)
-    protected void newFriends(View view) {
-        IntentUtils.gotoNextActivity(getActivity(), NewFriendsActivity.class);
-    }
 
     /**
      * 为长按单个删除准备 已经无用了
@@ -122,38 +108,15 @@ public class NotifyFragment extends EditableFragment implements OnEditListener {
         builder.setPositiveButton(R.string.confirm, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                Mypm mypm = (Mypm) mAdapter.getItem(position - 1);
+                Notify notify = (Notify) mAdatper.getItem(position - 1);
 
-                doDelete(mypm.getTouid(), mAdapter, position);
+                doDelete(notify.getUid(), mAdatper, position);
 
             }
         });
         builder.setNegativeButton(R.string.cancel, null);
         Dialog dialog = builder.create();
         dialog.show();
-    }
-
-
-    @Override
-    public void onDelete() {
-
-        ZogUtils.printLog(MyPMFragment.class, "mListView.getCheckedItemCount():" + mListView.getCheckedItemCount());
-        if (mListView.getCheckedItemCount() < 1) {
-            return;
-        }
-        int headerCount = mListView.getRefreshableView().getHeaderViewsCount();
-        SparseBooleanArray array = mListView.getChoicePostions();
-        int count = mAdapter.getCount();
-        StringBuffer sb = new StringBuffer();
-        for (int i = headerCount; i < count + headerCount; i++) {
-            if (array.get(i)) {
-                Mypm mypm = (Mypm) mAdapter.getItem(i - headerCount);
-                if (mypm != null && !TextUtils.isEmpty(mypm.getTouid())) {
-                    sb.append(mypm.getTouid()).append("_");
-                }
-            }
-        }
-        doDelete(sb.toString(), mAdapter, null);
     }
 
 
@@ -209,9 +172,13 @@ public class NotifyFragment extends EditableFragment implements OnEditListener {
         });
     }
 
-    public MyPMAdatper getAdapter() {
-        return mAdapter;
+    public NotifyAdatper getAdapter() {
+        return mAdatper;
     }
 
 
+    @Override
+    public void onDelete() {
+
+    }
 }
