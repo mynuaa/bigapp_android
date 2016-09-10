@@ -16,6 +16,7 @@ public class Notify implements Serializable, Comparable<Notify> {
     private String note;
     private String type;
     private String uid;
+    private String dateline;
     private String msgtoidAvatar;
     private String msgfromidAvatar;
 
@@ -39,6 +40,22 @@ public class Notify implements Serializable, Comparable<Notify> {
 
     public void setAuthor(String author) {
         this.author = author;
+    }
+
+    public void setDateLine(String dateline) {
+        this.dateline = dateline;
+    }
+
+    public String getDateLine() {
+        return dateline;
+    }
+
+    public void setAuthorId(String authorid) {
+        this.authorid = authorid;
+    }
+
+    public String getAuthorid() {
+        return authorid;
     }
 
     public String getNew() {
@@ -67,6 +84,14 @@ public class Notify implements Serializable, Comparable<Notify> {
 
     public String getId() {
         return id;
+    }
+
+    public String getFrom_id() {
+        return from_id;
+    }
+
+    public void setFrom_id(String from_id) {
+        this.from_id = from_id;
     }
 
     public void setId() {
