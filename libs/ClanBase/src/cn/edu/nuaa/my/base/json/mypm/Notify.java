@@ -59,10 +59,10 @@ public class Notify implements Serializable, Comparable<Notify> {
     }
 
     public String getNew() {
-        return this.isnew;
+        return isnew;
     }
 
-    public void setIsnew(String isnew) {
+    public void setNew(String isnew) {
         this.isnew = isnew;
     }
 

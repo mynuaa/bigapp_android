@@ -1,12 +1,11 @@
 package cn.edu.nuaa.my.message.pm;
 
 import android.content.Context;
+import android.text.TextPaint;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-
-import com.keyboard.utils.DefEmoticons;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -74,13 +73,19 @@ public class NotifyAdatper extends BaseRefreshAdapter<NotifyJson> {
        // String dateString = formatter.format(currentTime);
        // timeText.setText(DefEmoticons.replaceUnicodeByEmoji(context,dateString));
         TextView contentText = ViewHolder.get(convertView, R.id.content);
-        String url = "http://my.nuaa.edu.cn/ucenter/avatar.php?uid=" + notify.getAuthorid() + "&size=big";
+        String url = "http://my.nuaa.edu.cn/ucenter/avatar.php?uid=" + notify.getAuthorid() + "&size=small";
         LoadImageUtils.display(context, photoImage, url);
         if(matcher_article.find()) {
             String name = StringUtils.get(notify.getAuthor());
             String text = name + "  回复了你的帖子： " + matcher_article.group(0);
-            contentText.setText(DefEmoticons.replaceUnicodeByEmoji(context, StringUtils.get(text)));
+            contentText.setText(StringUtils.get(text));
         }
+
+        if(StringUtils.get(notify.getNew()) == "1") {
+            TextPaint contentText_p = contentText.getPaint();
+            contentText_p.setFakeBoldText(true);
+        }
+
         contentText.setClickable(true);
         if(matcher_tid.find()) {
             mTid = matcher_tid.group(0);
