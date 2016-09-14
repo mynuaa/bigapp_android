@@ -67,7 +67,6 @@ public class  NotifyFragment extends EditableFragment implements OnEditListener 
         mAdatper = new NotifyAdatper(getActivity(), this, params);
         mAdatper.setOnDataSetChangedObserver(mObserver);
         mListView.setAdapter(mAdatper);
-        mListView.setOnEditListener(this);
         AppSPUtils.saveNewMessage(getActivity(), 0);
 
         return view;
@@ -180,5 +179,8 @@ public class  NotifyFragment extends EditableFragment implements OnEditListener 
     @Override
     public void onDelete() {
 
+    }
+    public void refresh() {
+        mListView.refresh();
     }
 }

@@ -46,7 +46,6 @@ public class NotifyAdatper extends BaseRefreshAdapter<NotifyJson> {
         }
 
         Notify notify = (Notify) getItem(position);
-        String title = "回复了您的帖子";
         String note = StringUtils.get(notify.getNote());
 //
 //        CheckBox checkbox = ViewHolder.get(convertView, R.id.checkbox);
@@ -57,6 +56,9 @@ public class NotifyAdatper extends BaseRefreshAdapter<NotifyJson> {
 
 
 
+        ImageView photoImage = ViewHolder.get(convertView, R.id.icon);
+
+        LoadImageUtils.display(context, photoImage, notify.getAuthorid());
         // 创建 Pattern 对象
         Pattern r = Pattern.compile(pattern);
         Pattern s = Pattern.compile(pattern_tid);
@@ -64,7 +66,6 @@ public class NotifyAdatper extends BaseRefreshAdapter<NotifyJson> {
         // 现在创建 matcher 对象
         Matcher matcher_article = r.matcher(note);
         Matcher matcher_tid = s.matcher(note);
-        ImageView photoImage = ViewHolder.get(convertView, R.id.icon);
         TextView nameText = ViewHolder.get(convertView, R.id.name);
         TextView timeText = ViewHolder.get(convertView,R.id.time);
        // String time = StringUtils.get(notify.getDateLine());
@@ -73,17 +74,10 @@ public class NotifyAdatper extends BaseRefreshAdapter<NotifyJson> {
        // String dateString = formatter.format(currentTime);
        // timeText.setText(DefEmoticons.replaceUnicodeByEmoji(context,dateString));
         TextView contentText = ViewHolder.get(convertView, R.id.content);
-        String url = "http://my.nuaa.edu.cn/ucenter/avatar.php?uid=" + notify.getAuthorid() + "&size=small";
-        LoadImageUtils.display(context, photoImage, url);
         if(matcher_article.find()) {
             String name = StringUtils.get(notify.getAuthor());
             String text = name + "  回复了你的帖子： " + matcher_article.group(0);
             contentText.setText(StringUtils.get(text));
-        }
-
-        if(StringUtils.get(notify.getNew()) == "1") {
-            TextPaint contentText_p = contentText.getPaint();
-            contentText_p.setFakeBoldText(true);
         }
 
         contentText.setClickable(true);
@@ -96,6 +90,15 @@ public class NotifyAdatper extends BaseRefreshAdapter<NotifyJson> {
                 JumpThreadUtils.gotoThreadDetail(context,mTid);
             }
         });
+        View newNotify = ViewHolder.get(convertView, R.id.newNotify);
+
+        if (notify.getNew().equals("1")) {
+            newNotify.setVisibility(View.VISIBLE);
+            TextPaint contentText_p = contentText.getPaint();
+            contentText_p.setFakeBoldText(true);
+        } else {
+            newNotify.setVisibility(View.GONE);
+        }
         return convertView;
     }
 

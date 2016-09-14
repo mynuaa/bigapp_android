@@ -51,7 +51,7 @@ public class Notify implements Serializable, Comparable<Notify> {
     }
 
     public void setAuthorId(String authorid) {
-        this.authorid = authorid;
+        this.authorid = "http://my.nuaa.edu.cn/ucenter/avatar.php?uid=" + authorid + "&size=small";
     }
 
     public String getAuthorid() {

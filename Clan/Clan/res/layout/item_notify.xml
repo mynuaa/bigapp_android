@@ -43,7 +43,7 @@
                     android:layout_width="@dimen/height_message"
                     android:layout_height="@dimen/height_message"
                     android:layout_centerVertical="true"
-                    android:src="@drawable/ic_protrait_solid" />
+                    />
 
                 <TextView
                     android:id="@+id/newNotify"
@@ -83,7 +83,7 @@
                     android:gravity="left|center_vertical"
                     android:maxLines="2"
                     android:text="@string/default_value"
-                    android:textColor="@color/text_gray"
+                    android:textColor="@color/text_black_content"
                     android:textSize="@dimen/text_size_3" />
             </LinearLayout>
         </RelativeLayout>

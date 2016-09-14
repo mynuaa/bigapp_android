@@ -10,6 +10,7 @@ import com.kit.utils.intentutils.IntentUtils;
 import com.kit.widget.slidingtab.SlidingTabLayout;
 import com.youzu.android.framework.ViewUtils;
 import com.youzu.android.framework.view.annotation.event.OnClick;
+
 import cn.edu.nuaa.my.R;
 import cn.edu.nuaa.my.base.EditableFatherFragment;
 import cn.edu.nuaa.my.base.EditableFragment;
@@ -24,6 +25,7 @@ import cn.edu.nuaa.my.message.pm.NotifyFragment;
 public class MessageFragment extends EditableFatherFragment {
 
     int positionInViewpager = 0;
+    int goInViewpager = 1;
 
     private ViewPager mViewPager;
     private EditableFragment[] mFragments = new EditableFragment[2];
@@ -148,6 +150,9 @@ public class MessageFragment extends EditableFatherFragment {
     public void refresh() {
         if (positionInViewpager == 0)
             ((MyPMFragment) mFragments[positionInViewpager]).refresh();
+        if (goInViewpager == 1) {
+            ((NotifyFragment) mFragments[goInViewpager]).refresh();
+        }
     }
 
     public void initMainMenu() {
