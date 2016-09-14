@@ -25,7 +25,6 @@ public class NotifyAdatper extends BaseRefreshAdapter<NotifyJson> {
 
     private Context context;
     private BaseFragment fragment;
-    private String mTid;
 
     public NotifyAdatper(Context context, ClanHttpParams params) {
         super(params);
@@ -65,7 +64,7 @@ public class NotifyAdatper extends BaseRefreshAdapter<NotifyJson> {
 
         // 现在创建 matcher 对象
         Matcher matcher_article = r.matcher(note);
-        Matcher matcher_tid = s.matcher(note);
+        final Matcher matcher_tid = s.matcher(note);
         TextView nameText = ViewHolder.get(convertView, R.id.name);
         TextView timeText = ViewHolder.get(convertView,R.id.time);
        // String time = StringUtils.get(notify.getDateLine());
@@ -81,13 +80,14 @@ public class NotifyAdatper extends BaseRefreshAdapter<NotifyJson> {
         }
 
         contentText.setClickable(true);
-        if(matcher_tid.find()) {
-            mTid = matcher_tid.group(0);
-        }
         contentText.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View arg0) {
-                JumpThreadUtils.gotoThreadDetail(context,mTid);
+                String mTid;
+                if(matcher_tid.find()) {
+                    mTid = matcher_tid.group(0);
+                    JumpThreadUtils.gotoThreadDetail(context,mTid);
+                }
             }
         });
         View newNotify = ViewHolder.get(convertView, R.id.newNotify);
