@@ -5,7 +5,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
-import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 
@@ -28,7 +27,7 @@ public class BadgeUtils {
 
     private static final String EXTRA_BADGE_COUNT_CLASS_NAME = "badge_count_class_name";
 
-    private static final Uri CONTENT_URI = Uri.parse("content://" + "com.android.badge" + "/" + "badge");
+    //private static final Uri CONTENT_URI = Uri.parse("content://" + "com.android.badge" + "/" + "badge");
 
 
     /**
@@ -196,13 +195,13 @@ public class BadgeUtils {
         extra.putStringArrayList("app_shortcut_custom_id", ids);
         extra.putInt("app_badge_count", count);
         Bundle b = null;
-        b = context.getContentResolver().call(CONTENT_URI, "setAppBadgeCount", null, extra);
+        //b = context.getContentResolver().call(CONTENT_URI, "setAppBadgeCount", null, extra);
         boolean result = false;
-        if (b != null) {
-            result = true;
-        } else {
-            result = false;
-        }
+        //if (b != null) {
+        //    result = true;
+       // } else {
+        //    result = false;
+       // }
         return;
 
     }
