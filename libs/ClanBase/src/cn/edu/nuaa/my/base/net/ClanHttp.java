@@ -7,6 +7,7 @@ import android.util.Log;
 import com.kit.utils.StringUtils;
 import com.kit.utils.ZogUtils;
 import com.youzu.android.framework.task.PriorityAsyncTask;
+
 import cn.edu.nuaa.my.base.R;
 import cn.edu.nuaa.my.base.callback.FavForumCallback;
 import cn.edu.nuaa.my.base.callback.FavThreadCallback;
@@ -16,6 +17,7 @@ import cn.edu.nuaa.my.base.callback.HttpCallback;
 import cn.edu.nuaa.my.base.callback.JSONCallback;
 import cn.edu.nuaa.my.base.callback.LoginCallback;
 import cn.edu.nuaa.my.base.callback.MypmCallback;
+import cn.edu.nuaa.my.base.callback.NotifyCallback;
 import cn.edu.nuaa.my.base.callback.ProfileSeeCallback;
 import cn.edu.nuaa.my.base.callback.RequestCallback;
 import cn.edu.nuaa.my.base.callback.StringCallback;
@@ -401,6 +403,18 @@ public class ClanHttp {
      * @param callback
      */
     public static void getMypm(Context context, MypmCallback callback) {
+        final ClanHttpParams params = new ClanHttpParams(context);
+        params.addQueryStringParameter("module", "mypm");
+        BaseHttp.get(Url.DOMAIN, params, callback);
+    }
+
+    /**
+     * 提醒
+     *
+     * @param context
+     * @param callback
+     */
+    public static void getNotify(Context context, NotifyCallback callback) {
         final ClanHttpParams params = new ClanHttpParams(context);
         params.addQueryStringParameter("module", "mypm");
         BaseHttp.get(Url.DOMAIN, params, callback);

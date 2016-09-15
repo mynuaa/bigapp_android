@@ -178,7 +178,6 @@ public class QQStyleMainActivity extends BaseSlidingActivity {
 
     public void initSlidingMenu() {
 //        View[] ignoreView = {viewPager};
-        SlidingMenuUtils.initSilidingMenu(this, null, false, getResources().getDrawable(R.drawable.bg_settings), true);
     }
 
     public void setTopBar() {

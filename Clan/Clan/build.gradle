@@ -46,10 +46,10 @@ android {
 
     defaultConfig {
         applicationId 'cn.edu.nuaa.my'
-        minSdkVersion 9
+        minSdkVersion 17
         targetSdkVersion 21
-        versionCode 8889
-        versionName "1.0.6"
+        versionCode 8890
+        versionName "1.0.7"
 //        multiDexEnabled true
 
         manifestPlaceholders = [
