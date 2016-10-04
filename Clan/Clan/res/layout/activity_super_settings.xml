@@ -67,14 +67,6 @@
 
             <include layout="@layout/include_gray_split" />
 
-            <com.kit.widget.textview.WithSwitchButtonTextView
-                android:id="@+id/wsbtvPush"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/gotextview_height_default"
-                android:background="@color/white"
-                android:padding="@dimen/content_border"
-                app:WithSwitchButtonTextView_title="@string/use_jpush" />
-
             <include layout="@layout/include_gray_split" />
 
             <com.kit.widget.textview.WithSwitchButtonTextView

@@ -10,6 +10,7 @@ import android.os.Message;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.igexin.sdk.PushManager;
 import com.kit.app.core.task.DoSomeThing;
 import com.kit.utils.ListUtils;
 import com.kit.utils.MessageUtils;
@@ -155,6 +156,8 @@ public class GuideActivity extends BaseActivity {
         ClanUtils.loadMyFav(this);
 
         InitUtils.initShareSDK(getApplicationContext());
+
+        PushManager.getInstance().initialize(this.getApplicationContext());
 
         //初始化广告配置
         InitUtils.initConfig(GuideActivity.this, new DoSomeThing() {

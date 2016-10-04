@@ -308,7 +308,6 @@
     <string name="open_super">超级模式</string>
     <string name="open_debug">启用调试</string>
     <string name="open_immersive_mode">开启沉浸模式（安卓4.4以上可用）</string>
-    <string name="use_jpush">启用推送</string>
 
     <string name="selecte_theme_color">选择主题颜色</string>
 

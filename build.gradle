@@ -12,5 +12,8 @@ allprojects {
     repositories {
         jcenter()
         mavenCentral()
+        maven {
+            url "http://mvn.gt.igexin.com/nexus/content/repositories/releases/"
+        }
     }
 }
