@@ -322,45 +322,47 @@ public class ServiceHelper extends HandlerThread implements Callback {
 
     /** upload all log to server */
     private boolean uploadLog(MessageModel eventData, String url) {
-        String content = eventData.data;
-        if (!TextUtils.isEmpty(content) && deviceHelper.isNetworkAvailable()) {
-            try {
-                JSONObject object = new JSONObject(content);
-                object.put(MessageUtils.DEVICE_DATA, getDeviceJSONObject());
-                content = object.toString();
-                if (Ln.DebugMode) {
-                    Toast.makeText(context, "Server address : " + url, Toast.LENGTH_SHORT).show();
-                }
-                PostResult post = NetworkHelper.uploadLog(url, content, getAppKey());
-
-                String responseMsg = post.getResponseMsg();
-                Ln.e("error", post.getResponseMsg());
-
-                if(responseMsg.equals("\"status\":200")){
-                    post.setSuccess(true);
-                }
-
-                if (post != null && post.isSuccess()) {
-                    boolean success = parseResponseData(post.getResponseMsg());
-                    if (success) {
-                        if (Ln.DebugMode) {
-                            Toast.makeText(context, "Send msg successfully!", Toast.LENGTH_SHORT).show();
-                        }
-                        MessageUtils.deleteManyMsg(context, eventData.idList);
-                    } else {
-                        if (Ln.DebugMode) {
-                            Toast.makeText(context, "Fail to send msg !", Toast.LENGTH_SHORT).show();
-                        }
-                    }
-                    return success;
-                } else {
-                    Ln.e("error", post.getResponseMsg());
-                }
-            } catch (Exception e) {
-                Ln.d("ServiceHelper == ", "uploadLog == ", e);
-            }
-        }
-        return false;
+        // TODO: 有能力之后换成自己的
+        return true;
+//        String content = eventData.data;
+//        if (!TextUtils.isEmpty(content) && deviceHelper.isNetworkAvailable()) {
+//            try {
+//                JSONObject object = new JSONObject(content);
+//                object.put(MessageUtils.DEVICE_DATA, getDeviceJSONObject());
+//                content = object.toString();
+//                if (Ln.DebugMode) {
+//                    Toast.makeText(context, "Server address : " + url, Toast.LENGTH_SHORT).show();
+//                }
+//                PostResult post = NetworkHelper.uploadLog(url, content, getAppKey());
+//
+//                String responseMsg = post.getResponseMsg();
+//                Ln.e("error", post.getResponseMsg());
+//
+//                if(responseMsg.equals("\"status\":200")){
+//                    post.setSuccess(true);
+//                }
+//
+//                if (post.isSuccess()) {
+//                    boolean success = parseResponseData(post.getResponseMsg());
+//                    if (success) {
+//                        if (Ln.DebugMode) {
+//                            Toast.makeText(context, "Send msg successfully!", Toast.LENGTH_SHORT).show();
+//                        }
+//                        MessageUtils.deleteManyMsg(context, eventData.idList);
+//                    } else {
+//                        if (Ln.DebugMode) {
+//                            Toast.makeText(context, "Fail to send msg !", Toast.LENGTH_SHORT).show();
+//                        }
+//                    }
+//                    return success;
+//                } else {
+//                    Ln.e("error", post.getResponseMsg());
+//                }
+//            } catch (Exception e) {
+//                Ln.d("ServiceHelper == ", "uploadLog == ", e);
+//            }
+//        }
+//        return false;
     }
 
     /**
