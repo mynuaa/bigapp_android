@@ -73,19 +73,11 @@ public class SuperSettingCommonFragment extends BaseFragment {
     @ViewInject(R.id.wttvThemeColorSelector)
     private WithTitleTextView wttvThemeColorSelector;
 
-
     @ViewInject(R.id.wsbtvOpenImmersiveMode)
     private WithSwitchButtonTextView wsbtvOpenImmersiveMode;
 
-
-    @ViewInject(R.id.wsbtvPush)
-    private WithSwitchButtonTextView wsbtvPush;
-
-
     @ViewInject(R.id.wsbtvShowGroupAndRegisterDate)
     private WithSwitchButtonTextView wsbtvShowGroupAndRegisterDate;
-
-
 
     private Context context;
 
@@ -180,7 +172,6 @@ public class SuperSettingCommonFragment extends BaseFragment {
         wsbtvShowNewFriendsInChatList.setChecked(AppUSPUtils.isShowNewFriendsInChatList(context));
         wsbtvOpenImmersiveMode.setChecked(AppUSPUtils.isOpenImmersiveMode(context));
 
-        wsbtvPush.setChecked(AppUSPUtils.isUUsePush(context));
         wsbtvShowGroupAndRegisterDate.setChecked(AppUSPUtils.isUShowGroupAndRegisterDate(context));
 
 
@@ -264,7 +255,6 @@ public class SuperSettingCommonFragment extends BaseFragment {
         }
     }
 
-
     @OnCompoundButtonCheckedChange(R.id.wsbtvLookPicSize)
     public void checkedChangeOnLookPicSize(CompoundButton buttonView, boolean isChecked) {
         ZogUtils.printError(SuperSettingCommonFragment.class, "saveLookPicSize:" + isChecked);
@@ -276,22 +266,11 @@ public class SuperSettingCommonFragment extends BaseFragment {
         }
     }
 
-
-    @OnCompoundButtonCheckedChange(R.id.wsbtvPush)
-    public void checkedChangeOnUsePush(CompoundButton buttonView, boolean isChecked) {
-        ZogUtils.printError(SuperSettingCommonFragment.class, "saveUUsePush:" + isChecked);
-        AppUSPUtils.saveUUsePush(context, isChecked);
-    }
-
-
-
-
     @OnCompoundButtonCheckedChange(R.id.wsbtvShowGroupAndRegisterDate)
     public void checkedChangeOnShowGroupAndRegisterDate(CompoundButton buttonView, boolean isChecked) {
         ZogUtils.printError(SuperSettingCommonFragment.class, "saveUShowGroupAndRegisterDate:" + isChecked);
         AppUSPUtils.saveUShowGroupAndRegisterDate(context, isChecked);
     }
-
 
     @Override
     public void onDestroy() {
