@@ -40,7 +40,7 @@ android {
         applicationId 'cn.edu.nuaa.my'
         minSdkVersion 17
         targetSdkVersion 21
-        versionCode 8890
+        versionCode 8891
         versionName "1.1.0"
 
         manifestPlaceholders = [
