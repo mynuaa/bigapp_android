@@ -24,6 +24,8 @@ import com.youzu.android.framework.view.annotation.ViewInject;
 import java.io.InputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 
 import cn.edu.nuaa.my.R;
@@ -178,8 +180,11 @@ public class GuideActivity extends BaseActivity {
         }).start();
 
         progressBar();
+        Date date = new Date();
+        SimpleDateFormat format = new SimpleDateFormat("yyyyMMdd");
+        String time = format.format(date);
         UpdateHelper updateHelper = new UpdateHelper.Builder(this)
-                .checkUrl("http://oceg1qe2m.bkt.clouddn.com/version.json?no-cache")
+                .checkUrl("http://oceg1qe2m.bkt.clouddn.com/version.json?" + time)
                 .isAutoInstall(false) //设置为false需在下载完手动点击安装;默认值为true，下载后自动安装。
                 .build();
         updateHelper.check();
