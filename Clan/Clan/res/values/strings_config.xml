@@ -2,8 +2,8 @@
 <resources>
 
     <string name="build_type">RELEASE</string>
-    <string name="version_name">1.0.6</string>
-    <integer name="version_code">8889</integer>
+    <string name="version_name">1.1.0</string>
+    <integer name="version_code">8891</integer>
     <!-- 内部版本 -->
     <integer name="version_zhao">99999</integer>
 
