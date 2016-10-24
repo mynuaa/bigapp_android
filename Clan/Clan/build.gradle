@@ -41,7 +41,7 @@ android {
         minSdkVersion 17
         targetSdkVersion 21
         versionCode 8890
-        versionName "1.0.7"
+        versionName "1.1.0"
 
         manifestPlaceholders = [
                 SHARESDK_CHANNEL: "channel",

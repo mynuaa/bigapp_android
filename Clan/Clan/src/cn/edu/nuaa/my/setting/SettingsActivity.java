@@ -20,7 +20,9 @@ import com.youzu.android.framework.view.annotation.ViewInject;
 import com.youzu.android.framework.view.annotation.event.OnClick;
 import com.youzu.android.framework.view.annotation.event.OnRadioGroupCheckedChange;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 import cn.edu.nuaa.my.R;
@@ -154,13 +156,15 @@ public class SettingsActivity extends BaseActivity {
 
     @OnClick(R.id.getup)
     public void update(View view) {
+        Date date = new Date();
+        SimpleDateFormat format = new SimpleDateFormat("yyyyMMdd");
+        String time = format.format(date);
         UpdateHelper updateHelper = new UpdateHelper.Builder(this)
-                .checkUrl("http://oceg1qe2m.bkt.clouddn.com/version.json?no-cache")
+                .checkUrl("http://oceg1qe2m.bkt.clouddn.com/version.json?" + time)
                 .isAutoInstall(false) //设置为false需在下载完手动点击安装;默认值为true，下载后自动安装。
                 .build();
         updateHelper.check();
     }
-
 
     @Override
     protected Dialog onCreateDialog(int id) {
