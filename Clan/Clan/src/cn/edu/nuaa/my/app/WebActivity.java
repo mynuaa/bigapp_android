@@ -1,5 +1,6 @@
 package cn.edu.nuaa.my.app;
 
+import android.os.Build;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
@@ -15,6 +16,9 @@ import com.kit.utils.ActionBarUtils;
 import com.kit.utils.ZogUtils;
 import com.youzu.android.framework.ViewUtils;
 import com.youzu.android.framework.view.annotation.event.OnClick;
+
+import java.lang.reflect.Field;
+
 import cn.edu.nuaa.my.R;
 import cn.edu.nuaa.my.app.config.AppConfig;
 import cn.edu.nuaa.my.base.IDClan;
@@ -22,13 +26,9 @@ import cn.edu.nuaa.my.base.util.AppSPUtils;
 import cn.edu.nuaa.my.base.util.CookieUtils;
 import cn.edu.nuaa.my.base.util.jump.JumpWebUtils;
 import cn.edu.nuaa.my.base.util.theme.ThemeUtils;
-
-import java.lang.reflect.Field;
-
 import cn.sharesdk.analysis.MobclickAgent;
 
 public class WebActivity extends com.kit.extend.ui.web.WebActivity {
-
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -38,24 +38,19 @@ public class WebActivity extends com.kit.extend.ui.web.WebActivity {
         ActionBarUtils.setHomeActionBar(this, R.drawable.ic_back);
     }
 
-
     public void initTheme() {
         ThemeUtils.initTheme(this);
     }
-
 
     @Override
     public boolean getExtra() {
         super.getExtra();
         contentViewName = "activity_web";
-
         return true;
     }
 
     public boolean initWidget() {
         setOverflowShowingAlways();
-
-
         return super.initWidget();
     }
 
@@ -66,7 +61,6 @@ public class WebActivity extends com.kit.extend.ui.web.WebActivity {
     public boolean initWidgetWithData() {
         return super.initWidgetWithData();
     }
-
 
     private void setOverflowShowingAlways() {
         try {
@@ -80,7 +74,6 @@ public class WebActivity extends com.kit.extend.ui.web.WebActivity {
         }
     }
 
-
     public void setTitle(int resId) {
         getSupportActionBar().setTitle(resId);
     }
@@ -89,12 +82,9 @@ public class WebActivity extends com.kit.extend.ui.web.WebActivity {
         getSupportActionBar().setTitle(title);
     }
 
-
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-
         ThemeUtils.initResource(this);
-
         switch (item.getItemId()) {
             case android.R.id.home:
                 this.finish();
@@ -102,15 +92,12 @@ public class WebActivity extends com.kit.extend.ui.web.WebActivity {
             default:
                 return super.onOptionsItemSelected(item);
         }
-
     }
-
 
     @OnClick(R.id.back)
     public void back(View view) {
         finish();
     }
-
 
     @Override
     protected void onDestroy() {
@@ -125,7 +112,6 @@ public class WebActivity extends com.kit.extend.ui.web.WebActivity {
     protected void onResume() {
         super.onResume();
         AppConfig.isShowing = AppStatus.SHOWING;
-
         //统计时长
         MobclickAgent.onResume(this);
     }
@@ -133,55 +119,44 @@ public class WebActivity extends com.kit.extend.ui.web.WebActivity {
     public void onPause() {
         super.onPause();
         AppConfig.isShowing = AppStatus.BACKGROUND;
-
         MobclickAgent.onPause(this);
     }
 
     @Override
     public void initWebView() {
         super.initWebView();
+        // 允许调试
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+            WebView.setWebContentsDebuggingEnabled(true);
+        }
         webFragment.getWebView().getSettings().setUserAgentString(webFragment.getWebView().getSettings().getUserAgentString() + " My_APP");
         webFragment.setGoToTopPosition(getGoToTopPosition());
-
         webFragment.setWebScrollListener(new LoadMoreWebView.WebScrollListener() {
-
-                                             @Override
-                                             public void onScroll(int dx, int dy) {
-                                             }
-
-                                             @Override
-                                             public void onTop() {
-                                             }
-
-                                             @Override
-                                             public void onCenter() {
-                                             }
-
-                                             @Override
-                                             public void onBottom() {
-                                                 ZogUtils.printLog(WebActivity.class, "bottom load more");
-                                                 if (!webFragment.isRefreshing())
-                                                     getData(false);
-                                             }
-
-                                         }
-        );
-
-
-
+            @Override
+            public void onScroll(int dx, int dy) {
+            }
+            @Override
+            public void onTop() {
+            }
+            @Override
+            public void onCenter() {
+            }
+            @Override
+            public void onBottom() {
+                ZogUtils.printLog(WebActivity.class, "bottom load more");
+                if (!webFragment.isRefreshing())
+                    getData(false);
+            }
+        });
         webFragment.getWebView().setWebViewClient(new DefaultWebViewClient(webFragment) {
-
             @Override
             public void loadingUrl(WebView view, String url) {
                 JumpWebUtils.gotoWeb(WebActivity.this, "", url);
             }
         });
-
-
     }
 
     private void getData(final boolean isJumpPage) {
-
     }
 
     @Override
@@ -189,7 +164,6 @@ public class WebActivity extends com.kit.extend.ui.web.WebActivity {
         cookies = CookieUtils.getCookies(this);
         webFragment.setCookieFromCookieStore(this, content, cookies);
     }
-
 
     private int getGoToTopPosition() {
         if (AppSPUtils.getShowGoToTop(WebActivity.this) == IDClan.ID_RADIOBUTTON_SHOW_GO_TO_TOP_RIGHT) {
