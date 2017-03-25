@@ -159,8 +159,8 @@ public class GuideActivity extends BaseActivity {
 
         InitUtils.initShareSDK(getApplicationContext());
 
-        PushManager.getInstance().initialize(this.getApplicationContext());
-
+        PushManager.getInstance().initialize(this.getApplicationContext(), cn.edu.nuaa.my.forum.DemoPushService.class);
+        PushManager.getInstance().registerPushIntentService(this.getApplicationContext(), cn.edu.nuaa.my.forum.DemoIntentService.class);
         //初始化广告配置
         InitUtils.initConfig(GuideActivity.this, new DoSomeThing() {
             @Override

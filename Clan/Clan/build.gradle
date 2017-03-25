@@ -22,7 +22,7 @@ dependencies {
     compile 'com.balysv.materialmenu:material-menu:1.5.4'
     compile 'com.github.navasmdc:MaterialDesign:1.5@aar'
     // 个推 sdk
-    compile 'com.getui:sdk:2.9.0.0'
+    compile 'com.getui:sdk:2.10.2.0'
     compile 'com.android.support:support-v4:+'
 }
 
@@ -39,16 +39,16 @@ android {
     defaultConfig {
         applicationId 'cn.edu.nuaa.my'
         minSdkVersion 17
-        targetSdkVersion 21
-        versionCode 8891
-        versionName "1.1.0"
+        targetSdkVersion 23
+        versionCode 8892
+        versionName "1.1.1"
 
         manifestPlaceholders = [
                 SHARESDK_CHANNEL: "channel",
                 SHARESDK_APPKEY : "7c2b4bc30b4a",
-                GETUI_APP_ID : "egKCOlM5lz6s7qOBO5vbY4",
-                GETUI_APP_KEY : "UxtE4f4xc0765ddr1bDOS3",
-                GETUI_APP_SECRET : "Ft2m0M2dhH99l9ob3xX0j3",
+                GETUI_APP_ID : "KojdqNRjCjAFSICe5HV3C9",
+                GETUI_APP_KEY : "xNrUHg1geQ9jUuBC2nqHJ",
+                GETUI_APP_SECRET : "tfvDVY2vK89G4L1H2FwhL1",
                 PACKAGE_NAME : applicationId,
         ]
 
