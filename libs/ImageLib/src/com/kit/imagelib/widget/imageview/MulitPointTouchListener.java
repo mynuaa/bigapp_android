@@ -97,7 +97,7 @@ public class MulitPointTouchListener implements OnTouchListener {
             // TODO Auto-generated catch block
             e.printStackTrace();
         }
-        return FloatMath.sqrt(x * x + y * y);
+        return (float)Math.sqrt(x * x + y * y);
 
     }
 

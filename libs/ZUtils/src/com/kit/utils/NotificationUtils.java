@@ -83,12 +83,6 @@ public class NotificationUtils {
                         i,
                         PendingIntent.FLAG_UPDATE_CURRENT);
             }
-            n.setLatestEventInfo(
-                    context,
-                    title,
-                    content,
-                    contentIntent);
-            nm.notify(notifyId, n);
 
         }
     }
