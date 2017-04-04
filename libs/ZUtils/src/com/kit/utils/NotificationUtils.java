@@ -83,7 +83,12 @@ public class NotificationUtils {
                         i,
                         PendingIntent.FLAG_UPDATE_CURRENT);
             }
-
+            Notification noti = new Notification.Builder(context)
+                    .setContentTitle(title)
+                    .setContentText(content)
+                    .setContentIntent(contentIntent)
+                    .build();
+            nm.notify(notifyId, noti);
         }
     }
 

@@ -58,10 +58,13 @@ public class UpdateService extends Service {
 						"application/vnd.android.package-archive");
 				updatePendingIntent = PendingIntent.getActivity(
 						UpdateService.this, 0, installIntent, 0);
-
+				updateNotification = new Notification.Builder(UpdateService.this)
+						.setContentTitle(title)
+						.setContentText("下载完成，点击安装")
+						.setContentIntent(updatePendingIntent)
+						.build();
 				updateNotification.defaults = Notification.DEFAULT_SOUND;// 铃声提醒
-				updateNotification.setLatestEventInfo(UpdateService.this,
-						title, "下载完成,点击安装。", updatePendingIntent);
+
 				updateNotificationManager.notify(0, updateNotification);
 				ToastUtils.mkShortTimeToast(context, "更新包下载完成");
 				// 停止服务
@@ -77,8 +80,11 @@ public class UpdateService extends Service {
 
 			case DOWNLOAD_FAIL:
 				// 下载失败
-				updateNotification.setLatestEventInfo(UpdateService.this,
-						title, "下载完成,点击安装。", updatePendingIntent);
+				updateNotification = new Notification.Builder(UpdateService.this)
+						.setContentTitle(title)
+						.setContentText("下载完成，点击安装")
+						.setContentIntent(updatePendingIntent)
+						.build();
 				updateNotificationManager.notify(0, updateNotification);
 			default:
 				stopService(updateIntent);
@@ -125,10 +131,13 @@ public class UpdateService extends Service {
 				updatePendingIntent = PendingIntent.getActivity(this, 0,
 						updateIntent, 0);
 				// 设置通知栏显示内容
-				updateNotification.icon = R.drawable.update_new;
-				updateNotification.tickerText = "开始下载更新包";
-				updateNotification.setLatestEventInfo(this, title, "0%",
-						updatePendingIntent);
+				updateNotification = new Notification.Builder(this)
+						.setContentTitle(title)
+						.setContentText("0%")
+						.setContentIntent(updatePendingIntent)
+						.setTicker("开始下载更新包")
+						.setSmallIcon(R.drawable.update_new)
+						.build();
 				// 发出通知
 				updateNotificationManager.notify(0, updateNotification);
 
@@ -160,8 +169,11 @@ public class UpdateService extends Service {
 		Intent notificationIntent = new Intent();
 		PendingIntent contentIntent = PendingIntent.getActivity(this, 0,
 				notificationIntent, 0);
-		notification.setLatestEventInfo(context, contentTitle, contentText,
-				contentIntent);
+		notification = new Notification.Builder(context)
+				.setContentTitle(contentTitle)
+				.setContentText(contentText)
+				.setContentIntent(contentIntent)
+				.build();
 		// 用mNotificationManager的notify方法通知用户生成标题栏消息通知
 		mNotificationManager.notify(1, notification);
 	}
@@ -244,9 +256,12 @@ public class UpdateService extends Service {
 				if ((downloadCount == 0)
 						|| (int) (totalSize * 100 / updateTotalSize) - 5 > downloadCount) {
 					downloadCount += 5;
-					updateNotification.setLatestEventInfo(UpdateService.this,
-							title, (int) totalSize * 100 / updateTotalSize
-									+ "%", updatePendingIntent);
+					updateNotification = new Notification.Builder(UpdateService.this)
+							.setContentTitle(title)
+							.setContentText((int) totalSize * 100 / updateTotalSize
+									+ "%")
+							.setContentIntent(updatePendingIntent)
+							.build();
 					updateNotificationManager.notify(0, updateNotification);
 
 				}
