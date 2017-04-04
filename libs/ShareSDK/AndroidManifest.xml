@@ -25,8 +25,8 @@
     <!--android:smallScreens="true" />-->
 
     <uses-sdk
-        android:minSdkVersion="8"
-        android:targetSdkVersion="16" />
+        android:minSdkVersion="21"
+        android:targetSdkVersion="23" />
 
     <!--<application-->
     <!--android:icon="@drawable/blue_point"-->
