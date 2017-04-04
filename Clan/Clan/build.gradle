@@ -28,8 +28,9 @@ dependencies {
 
 
 android {
-    compileSdkVersion 21
-    buildToolsVersion "22.0.1"
+    compileSdkVersion 25
+    buildToolsVersion '25.0.0'
+    useLibrary 'org.apache.http.legacy'
 
     packagingOptions {
         exclude 'META-INF/maven/com.nostra13.universalimageloader/universal-image-loader/pom.properties'

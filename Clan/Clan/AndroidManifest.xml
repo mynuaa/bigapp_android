@@ -5,8 +5,8 @@
     android:versionName="@string/version_name">
 
     <uses-sdk
-        android:minSdkVersion="9"
-        android:targetSdkVersion="14" />
+        android:minSdkVersion="21"
+        android:targetSdkVersion="23" />
 
     <supports-screens
         android:anyDensity="true"
