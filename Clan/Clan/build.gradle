@@ -22,7 +22,7 @@ dependencies {
     compile 'com.balysv.materialmenu:material-menu:1.5.4'
     compile 'com.github.navasmdc:MaterialDesign:1.5@aar'
     // 个推 sdk
-    compile 'com.getui:sdk:2.9.0.0'
+    compile 'com.getui:sdk:+'
     compile 'com.android.support:support-v4:+'
 }
 
@@ -99,7 +99,7 @@ android {
     buildTypes {
         release {
             signingConfig signingConfigs.release
-            proguardFiles getDefaultProguardFile('proguard-project.txt'), 'proguard-project.txt'
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-android-optimize.txt'
             minifyEnabled false
         }
     }

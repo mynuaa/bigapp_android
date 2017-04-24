@@ -36,12 +36,12 @@ android {
 //        }
 
         debug {
-            proguardFiles getDefaultProguardFile('proguard-project.txt'), 'proguard-debug.txt'
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-debug.txt'
             minifyEnabled false
         }
 
         release {
-            proguardFiles getDefaultProguardFile('proguard-project.txt'), 'proguard-project.txt'
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-project.txt'
             minifyEnabled true
         }
     }
